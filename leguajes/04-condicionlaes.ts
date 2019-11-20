@@ -90,10 +90,10 @@ if(undefined){             //falsy
 
 
 const calculo = "sumar"; // calculos a hacer
-switch(calculo){
+switch(calculo){       // comparacion de casos
     case "sumar":
         //
-        break;
+        break;         // detener switch
     case "restar":
         //
         break;
@@ -105,6 +105,37 @@ switch(calculo){
         break;
     default:
 }
+
+/* 6 guagua
+guabra 18
+longo 25
+cucho 45
+ruco 65*/
+const edadString = prompt("Ingresar edad");
+const edad = Number(edadString);
+if(edad>=0 && edad<6){
+    console.log(" Es guagua")
+}else{
+    if(edad>=6 && edad<18){
+        console.log(" Es guambra")
+    }else{
+        if(edad>=18 && edad<45){
+            console.log(" Es longo")
+        }else{
+            if(edad>=45 && edad<65){
+                console.log(" Es cucho")
+            }else{
+                if(edad>=64){
+                    console.log(" Es ruco")
+                }else{
+                    console.log("ingrese una edad")  // siempre algo 
+                }     
+            }
+        }       
+    }
+} 
+
+                                        
 
 /* 
    AND  -->  &&                           OR --> ||
