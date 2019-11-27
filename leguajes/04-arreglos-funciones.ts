@@ -1,18 +1,19 @@
-let arregloNumeros = [1,2,3,4,5,6,7,8,9,10];
-// Acceder
-// Necesito: Indice // imprime lo que esta en la posicion n-1 que se pide 
-console.log(arregloNumeros[6]); // 7
-// Añadir
-// Necesito: Elemto a añadirse
-arregloNumeros.push(33);
+const arregloNumeros = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//Acceder
+//Necesito: Indice
+console.log(arregloNumeros[6]); //7
+//Añadir al final
+//Necesito: Elemento a añadirse 
+arregloNumeros.push(11);
+//Borrar al final 
+arregloNumeros.pop();
+//Añadir en un indice
+//Necesito: indice, elemento
+arregloNumeros.splice(1, 0, 1.1);
 console.log(arregloNumeros);
-// Borrar al final
-
-// Añadir al indice
-// Necesito: Indice
-//            Elemento
-arregloNumeros.splice(0, 0, 1.1);
-// Añador o Borrar
+//o borrar
+arregloNumeros.splice(7, 1);
+console.log(arregloNumeros);
 
 //    ...
 
