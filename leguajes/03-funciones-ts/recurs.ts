@@ -1,16 +1,16 @@
-function imprimirMensajeNVaces(mensaje: number, numeroVeces: number): void{
-    if(numeroVeces == 0){
+function imprimirElementos( arregloNumeros: number[] = [1,2,3], n: number): void{
+    if(n == 3){
         console.log('Se termino');
     }else{
-        console.log(mensaje);
-        const nuevoNumeroDeVeces = numeroVeces -1;
-        imprimirMensajeNVaces(mensaje,nuevoNumeroDeVeces);
+        const arregloNumeros: number[] = [1,2,3]
+        console.log(elemento);
+        const nuevoNumeroDeVeces = n +1;
+        imprimirElementos(elemento,nuevoNumeroDeVeces);
     }
 }
 const arregloNumeros: number[] = [1,2,3]
-
 function main(){
-    imprimirMensajeNVaces(arregloNumeros,3);
+    imprimirElementos('',2);
 }
-//necesito cambiar mensaje por cada uno de los ellementos por lo tanto tengo que poder acseder a cada uno de ellonumero de veces lo doy yo porque me dan el arreglo
 main();
+//necesito cambiar mensaje por cada uno de los ellementos por lo tanto tengo que poder acseder a cada uno de ellonumero de veces lo doy yo porque me dan el arreglo
