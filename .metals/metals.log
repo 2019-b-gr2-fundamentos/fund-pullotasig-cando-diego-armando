@@ -1,0 +1,271 @@
+INFO  time: initialize in 0.53s
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+INFO  no build target: using presentation compiler with only scala-library
+dic 09, 2019 2:39:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 1
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+dic 09, 2019 2:46:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 210
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+dic 09, 2019 3:32:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 533
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+dic 09, 2019 3:33:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 636
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+dic 09, 2019 3:38:07 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMACIÓN: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+dic 09, 2019 3:38:08 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:417)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:137)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:113)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:102)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:155)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:959)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:807)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:22)
+
+dic 09, 2019 3:38:08 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMACIÓN: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+dic 09, 2019 3:38:08 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:417)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:137)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:113)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:102)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:155)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:959)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:807)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:22)
+
+dic 09, 2019 3:38:08 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMACIÓN: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+dic 09, 2019 3:38:08 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:417)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:137)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:113)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:102)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:155)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:959)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:807)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:22)
+
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+dic 09, 2019 3:40:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 1105
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\calculadora.scala
+INFO  shutting down Metals
