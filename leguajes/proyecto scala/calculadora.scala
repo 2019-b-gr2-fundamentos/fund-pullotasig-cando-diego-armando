@@ -1,6 +1,9 @@
-object calculadora{ // pedir valor y guardamos en operaciones
-    val operacion = 6
-    println(operacion match{
+object calculadora{  // pedir valor y guardamos en operaciones
+    println("Escriba el numero de la operacion que desea realizar")
+    println("")
+    def main(args: Array[String]): Unit = {
+    val numeroDeOperacion: Scanner = new Scanner(System.in)
+    println(numeroDeOperacion match{
         case 1 => {
             def suma(A: Int, B: Int):Int{
                 A+B
@@ -58,6 +61,7 @@ object calculadora{ // pedir valor y guardamos en operaciones
             }
         }
     })
+    }
 }
 
 
