@@ -1,12 +1,10 @@
 import java.util.Scanner
 import scala.collection.mutable
 object MarcasDeAlcohol {
+    
   
-   val ArregloDeMarcas = mutable.Set("corona","tequila" )
-   
-   
   def main(args: Array[String])={
-      
+    var arregloDeMarcas = mutable.Set("corona","tequila" )  
     var accion: Int = 0
     while(accion < 5){  
       
@@ -29,58 +27,59 @@ object MarcasDeAlcohol {
     }
    
     }
-  }
-  
-  def eliminar(args: Array[String])={
+    def eliminar(args: Array[String])={
     
-    for(ArregloDeMarcas2 <- ArregloDeMarcas){            
-    println(ArregloDeMarcas2)
+    for(arregloDeMarcas2 <- arregloDeMarcas){            
+    println(arregloDeMarcas2)
     }
 
     var sccan: Scanner = new Scanner(System.in)
     println("Ingrese la marca que quiere quitar")
     var pos:String = sccan.next()
                                   
-    ArregloDeMarcas -= pos
-  }
-  
-  def editar(args: Array[String])={
-
-    for(ArregloDeMarcas2 <- ArregloDeMarcas){             
-    println(ArregloDeMarcas2)
+    arregloDeMarcas -= pos
     }
+  
+    def editar(args: Array[String])={
+
+      for(arregloDeMarcas2 <- arregloDeMarcas){             
+      println(arregloDeMarcas2)
+      }
 
     var sccan: Scanner = new Scanner(System.in)
     println("¿Ingrese posicion de la marca, que quiere borrar?")
-    var pos:Int = sccan.nextInt()
+    var x:Int = sccan.nextInt()
                 
     var scaan: Scanner = new Scanner(System.in)
     println("Ingrese nueva marca")
-    var ne:String = scaan.next()
+    var nuevaMarca:String = scaan.next()
     
-    ArregloDeMarcas(pos) == ne
-  }
-
-  def agregar(args: Array[String])={
-
-    for(ArregloDeMarcas2 <- ArregloDeMarcas){             
-    println(ArregloDeMarcas2)
+    arregloDeMarcas(x) = nuevaMarca     
     }
+
+    def agregar(args: Array[String])={
+
+      for(arregloDeMarcas2 <- arregloDeMarcas){             
+      println(arregloDeMarcas2)
+      }
 
     var scaan: Scanner = new Scanner(System.in)  
     println("Ingrese nueva marca")
     var nuevaMarca:String = scaan.next()
          
-    ArregloDeMarcas += nuevaMarca
+    arregloDeMarcas += nuevaMarca
                 
-  }
+    }
   
     
-  def imprimir(args: Array[String])={
+    def imprimir(args: Array[String])={
     
-    for(ArregloDeMarcas2 <- ArregloDeMarcas){
+      for(arregloDeMarcas2 <- arregloDeMarcas){
                   
-    println(ArregloDeMarcas2)
-    }  
+      println(arregloDeMarcas2)
+      }
+    }
   }
 }
+    
+    
