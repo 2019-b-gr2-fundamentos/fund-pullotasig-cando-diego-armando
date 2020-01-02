@@ -12,11 +12,25 @@ function compararMatriz(matrizUno: number[][],matrizDos: number[][]): boolean {
     const matrizDosSegundaDimension = obtenerSegundaDimension(
         matrizDos
         );
+    /* 
     console.log(matrizUnoPrimeraDimension);
     console.log(matrizUnoSegundaDimension);
     console.log(matrizDosPrimeraDimension);
     console.log(matrizDosSegundaDimension);
-return true;
+    */
+   const noFalsos = matrizUnoPrimeraDimension && matrizUnoSegundaDimension && matrizDosPrimeraDimension && matrizDosSegundaDimension
+   if(noFalsos){
+       const igualesDimension = matrizUnoPrimeraDimension == matrizDosPrimeraDimension && matrizUnoSegundaDimension == matrizDosSegundaDimension;
+       if( igualesDimension ){
+        return true;
+    } else {
+        return false;
+    }
+       
+   }else{
+       return false;
+   }
+
 }
 
 function obtenerPrimeraDimension(matrizUno: number[][]): number | boolean{
@@ -60,7 +74,6 @@ function verificarTodosLosElementosDeUnArregloSonArreglo(arreglo: any[]):boolean
     return true;
 }
 
-
 function main(){
     const matrizUno = [
         [1,2,3],
@@ -71,5 +84,8 @@ function main(){
         [3,4,2]
     ];
     compararMatriz(matrizUno, matrizDos);
+    const comparacion = compararMatriz;
+    console.log(comparacion);
 }
+
 main();
