@@ -1,0 +1,14 @@
+{
+  "name": "05-proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "(tsc index1.ts || echo) && node index1.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "diego-armandofund": "^1.0.0"
+  }
+}

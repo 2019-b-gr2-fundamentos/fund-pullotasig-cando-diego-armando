@@ -1,0 +1,17 @@
+{
+  "name": "diego-armandofund",
+  "version": "1.0.0",
+  "description": "libreria fundamentos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fundamentos",
+    "epn",
+    "ejemplo"
+  ],
+  "author": "Diego Pullotasig",
+  "license": "ISC"
+}
+

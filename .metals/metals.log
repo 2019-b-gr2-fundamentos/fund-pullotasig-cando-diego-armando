@@ -293,3 +293,9 @@ java.lang.NullPointerException
 	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:37)
 
 INFO  shutting down Metals
+INFO  time: initialize in 0.86s
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\proyecto scala\examen.scala
+INFO  shutting down Metals
+INFO  time: initialize in 0.9s
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
