@@ -26,7 +26,7 @@ if ( operacionB  > = 1  &&  operacionB  <= 4 ) {
             consola . log ( numa  -  entumecido );
             romper ;
         caso  " 3 " :
-            consola . log ( numa  *  numb );
+            consola.log( numa  *  numb );
             romper ;
         caso  " 4 " :
             consola . log ( numa  /  numb );
@@ -43,7 +43,7 @@ if ( operacionB  > = 1  &&  operacionB  <= 4 ) {
     const discriminante =  numd  *  numd  -  4  *  numc  *  nume ;
     consola . log ( " Su discrminante es: " , discriminante );
     if ( discriminante  > 0 ) {
-        consola . log ( " Si es factorizable, sus raices son Reales " );
+        consol.log( " Si es factorizable, sus raices son Reales " );
     } más {
         if ( discriminante  < 0 ) {
             consola . log ( " No es factorizable, sus raices son Imaginarias " );
