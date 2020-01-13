@@ -299,3 +299,48 @@ WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-di
 INFO  shutting down Metals
 INFO  time: initialize in 0.9s
 WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+INFO  time: initialize in 1.75s
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+INFO  no build target: using presentation compiler with only scala-library
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+something's wrong: no file:///c%3A/Users/USREPS/Documents/GitHub/fund-pullotasig-cando-diego-armando/leguajes/scala/matriz/intercambio.scala in Array[Array[Int]]RangePosition(file:///c%3A/Users/USREPS/Documents/GitHub/fund-pullotasig-cando-diego-armando/leguajes/scala/matriz/intercambio.scala, 62, 62, 79)
+ene 13, 2020 2:15:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 36
+something's wrong: no file:///c%3A/Users/USREPS/Documents/GitHub/fund-pullotasig-cando-diego-armando/leguajes/scala/matriz/intercambio.scala in Array[Int]RangePosition(file:///c%3A/Users/USREPS/Documents/GitHub/fund-pullotasig-cando-diego-armando/leguajes/scala/matriz/intercambio.scala, 68, 68, 78)
+something's wrong: no file:///c%3A/Users/USREPS/Documents/GitHub/fund-pullotasig-cando-diego-armando/leguajes/scala/matriz/intercambio.scala in Array[Int]RangePosition(file:///c%3A/Users/USREPS/Documents/GitHub/fund-pullotasig-cando-diego-armando/leguajes/scala/matriz/intercambio.scala, 68, 68, 78)
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+ene 13, 2020 2:16:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 82
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+ene 13, 2020 2:36:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 219
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\leguajes\scala\matriz\intercambio.scala
+ene 13, 2020 3:30:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTraceNotification
+INFO  shutting down Metals
