@@ -2,7 +2,7 @@ import java.util.Scanner
 import scala.collection.mutable
 object MarcasDeAlcohol {
   
-   val ArregloDeMarcas = mutable.Set("corona","tequila" )
+  var ArregloDeMarcas = mutable.Set("corona","tequila" )
    
    
   def main(args: Array[String])={
@@ -18,7 +18,7 @@ object MarcasDeAlcohol {
     println("3 - Agregar marca de alcohol")
     println("4 - Ver arreglo")
     println("5 - salir")
-    accion = sscan.nextInt()
+    var accion = sscan.nextInt()
     
     accion match{
       case 1 => eliminar()
