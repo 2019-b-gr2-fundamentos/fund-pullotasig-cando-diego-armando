@@ -70,3 +70,5 @@ poliPerro.vacunado = true;
 
 // Acceder a los datos de una estructura de datos
 console.log(poliPerro)
+
+//---------------------------------------------------------------------------------//

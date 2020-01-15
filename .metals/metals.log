@@ -344,3 +344,7 @@ WARN  no build target: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-di
 ene 13, 2020 3:30:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFORMACIÓN: Unsupported notification method: $/setTraceNotification
 INFO  shutting down Metals
+INFO  started: Metals version 0.8.0 in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'
+INFO  time: initialize in 0.51s
+WARN  resetting database: C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando\.metals\metals.h2.db
+WARN  no build tool detected in workspace 'C:\Users\USREPS\Documents\GitHub\fund-pullotasig-cando-diego-armando'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
