@@ -1,24 +1,17 @@
 object comparar {
-  def verificacionDeDimensiones(matrizUno: Array[Array[Int]],matrizDos: Array[Array[Int]]){
+  def verificacionDeDimensiones(matrizUno: Array[Array[Int]]){
     var matrizUnoPrimeraDimension = obternerDimensionUno(matrizUno)
     var matrizUnoSegundaDimension = obternerDimensionDos(matrizUno)
-    var matrizDosPrimeraDimension = obternerDimensionUno(matrizDos)
-    var matrizDosSegundaDimension = obternerDimensionDos(matrizDos)
     println(matrizUnoPrimeraDimension)
-    println(matrizDosPrimeraDimension)
     println(matrizUnoSegundaDimension)
-    println(matrizDosSegundaDimension)
-    if(matrizUnoPrimeraDimension == matrizDosPrimeraDimension){
-      if(matrizUnoSegundaDimension == matrizDosSegundaDimension){
-        var sumaM = Array.ofDim[Int](matrizUnoPrimeraDimension,matrizUnoSegundaDimension)
+    if(matrizUnoPrimeraDimension == matrizUnoSegundaDimension){
+        var cambio = Array.ofDim[Int](matrizUnoPrimeraDimension,matrizUnoSegundaDimension)
          for(l <-0 until matrizUnoPrimeraDimension; m <- 0 until matrizUnoSegundaDimension){ 
            var d = matrizUno(l)(m)
-           var f = matrizDos(m)(l)
-            sumaM(l)(m) = d + f
+            cambio(l)(m) = d 
          }
-        println(sumaM.map(_.mkString(" ")).mkString("\n"))
-        println("las matrices son iguales")
-      }
+        println(cambio.map(_.mkString(" ")).mkString("\n"))
+        println("la matriz nueva")
     }  
   }
   
@@ -33,8 +26,7 @@ object comparar {
   }
   
   def main(args: Array[String]):Unit ={
-  var A: Array[Array[Int]] = Array(Array(1,9,3,8,8),Array(1,8,8,9,3),Array(1,8,8,9,3))
-  var B: Array[Array[Int]] = Array(Array(1,9,3,8,8),Array(1,8,8,9,3),Array(1,8,8,9,3))
-  verificacionDeDimensiones(A,B)
+  var A: Array[Array[Int]] = Array(Array(1,9,3),Array(1,8,8),Array(1,8,1))
+  verificacionDeDimensiones(A)
   }
 }
