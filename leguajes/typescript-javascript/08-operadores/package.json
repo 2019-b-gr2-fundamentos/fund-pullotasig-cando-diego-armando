@@ -1,0 +1,11 @@
+{
+  "name": "08-operadores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "go": "(tsc main.ts --target ES5 || echo) && node main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

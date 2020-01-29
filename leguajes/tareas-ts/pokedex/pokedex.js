@@ -50,153 +50,155 @@ var f_leer_1 = require("./funcion-interfas/f-leer");
 var prompts = require("prompts");
 // ------------------------------------ programa --------------------------------------
 function main() {
-    //muestra logo pokemon
-    var logoPokemon = f_leer_1.leer('./logo.txt');
-    console.log(logoPokemon);
-    //muestra formatoy ejemplo de datos de pokemon
-    var formatoDeDatos = f_leer_1.leer('./formato.txt');
-    //console.log(formatoDeDatos, '\n');
-    console.log('BIENVENIDO A LA POKEDEX');
-    console.log('QUE DESEA HACER');
-    console.log('1.       AÑADIR NUEVO POKEMON A LA POKEDEX');
-    console.log('2.       BUSCAR POKEMON EN LA POKEDEX');
-    console.log('3.       ELIMINAR POKEMON DE LA POKEDEX');
-    console.log('4.       EDITAR POKEMON DE LA POKEDEX');
-    console.log('5.       SALIR DE LA POKEDEX');
-    // const respuestaAccion = prompt('Ingresa el numero de la accion que deseas realizar');
-    //const accion = Number (respuestaAccion);
-    /*
-        const pedirAccion = [
-            {
-                type: 'text',
-                name: 'accion',
-                message: 'Ingresa el numero de la accion que deseas realizar'
-            }
-        ];
-    */
-    var respuestaAccion = prompt('Ingresa el numero de la accion que deseas realizar');
-    var accion = Number(respuestaAccion);
-    do {
-        function pokedex() {
-            return __awaiter(this, void 0, void 0, function () {
-                var _a, archivoDatosPokemon, contador, minimoID_1, arregloDePokedex, datosIngreoPokedex, respuestasDatosIngreoPokedex, nuevoRegistroUno, buscar_1, estudianteEncontrado, idABuscar_1, indiceEncontrado, nombreAEditar;
-                return __generator(this, function (_b) {
-                    switch (_b.label) {
-                        case 0:
-                            _a = accion;
-                            switch (_a) {
-                                case 1: return [3 /*break*/, 1];
-                                case 2: return [3 /*break*/, 3];
-                                case 3: return [3 /*break*/, 5];
-                                case 4: return [3 /*break*/, 6];
-                            }
-                            return [3 /*break*/, 9];
-                        case 1:
-                            archivoDatosPokemon = JSON.parse(formatoDeDatos);
-                            contador = 0;
-                            minimoID_1 = 0;
-                            archivoDatosPokemon.forEach(function (valorActual) {
-                                var idActual = valorActual.id;
-                                if (idActual > minimoID_1) {
-                                    minimoID_1 = idActual;
+    return __awaiter(this, void 0, void 0, function () {
+        var logoPokemon, formatoDeDatos, respuestaAccion, def, accion;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    logoPokemon = f_leer_1.leer('./logo.txt');
+                    console.log(logoPokemon);
+                    formatoDeDatos = f_leer_1.leer('./formato.txt');
+                    //console.log(formatoDeDatos, '\n');
+                    console.log('BIENVENIDO A LA POKEDEX');
+                    console.log('QUE DESEA HACER');
+                    console.log('1.       AÑADIR NUEVO POKEMON A LA POKEDEX');
+                    console.log('2.       BUSCAR POKEMON EN LA POKEDEX');
+                    console.log('3.       ELIMINAR POKEMON DE LA POKEDEX');
+                    console.log('4.       EDITAR POKEMON DE LA POKEDEX');
+                    console.log('5.       SALIR DE LA POKEDEX');
+                    respuestaAccion = prompts('Ingresa el numero de la accion que deseas realizar');
+                    def = Number(respuestaAccion);
+                    accion = def;
+                    _a.label = 1;
+                case 1: return [4 /*yield*/, function pokedex() {
+                        return __awaiter(this, void 0, void 0, function () {
+                            var _a, archivoDatosPokemon, contador, minimoID_1, arregloDePokedex, datosIngreoPokedex, respuestasDatosIngreoPokedex, nuevoRegistroUno, buscar_1, estudianteEncontrado, idABuscar_1, indiceEncontrado, nombreAEditar;
+                            return __generator(this, function (_b) {
+                                switch (_b.label) {
+                                    case 0:
+                                        _a = accion;
+                                        switch (_a) {
+                                            case 1: return [3 /*break*/, 1];
+                                            case 2: return [3 /*break*/, 3];
+                                            case 3: return [3 /*break*/, 5];
+                                            case 4: return [3 /*break*/, 6];
+                                        }
+                                        return [3 /*break*/, 9];
+                                    case 1:
+                                        archivoDatosPokemon = JSON.parse(formatoDeDatos);
+                                        contador = 0;
+                                        minimoID_1 = 0;
+                                        archivoDatosPokemon.forEach(function (valorActual) {
+                                            var idActual = valorActual.id;
+                                            if (idActual > minimoID_1) {
+                                                minimoID_1 = idActual;
+                                            }
+                                        });
+                                        minimoID_1 = minimoID_1 + 1;
+                                        contador = minimoID_1;
+                                        arregloDePokedex = archivoDatosPokemon;
+                                        datosIngreoPokedex = [
+                                            {
+                                                type: 'text',
+                                                name: 'apodo',
+                                                message: 'Ingresa el apodo del pokemon'
+                                            },
+                                            {
+                                                type: 'text',
+                                                name: 'nombre',
+                                                message: 'Ingresa el nombre del pokemon'
+                                            },
+                                            {
+                                                type: 'text',
+                                                name: 'tipo',
+                                                message: 'Ingresa el tipo del pokemon'
+                                            },
+                                            {
+                                                type: 'text',
+                                                name: 'nivel',
+                                                message: 'Ingresa el nivel del pokemon'
+                                            },
+                                            {
+                                                type: 'text',
+                                                name: 'edad',
+                                                message: 'Ingresa la edad en meses del pokemon'
+                                            }
+                                        ];
+                                        return [4 /*yield*/, prompts(datosIngreoPokedex)];
+                                    case 2:
+                                        respuestasDatosIngreoPokedex = _b.sent();
+                                        nuevoRegistroUno = {
+                                            id: contador,
+                                            apodo: respuestasDatosIngreoPokedex.apodo,
+                                            nombre: respuestasDatosIngreoPokedex.nombre,
+                                            tipo: respuestasDatosIngreoPokedex.tipo,
+                                            nivel: respuestasDatosIngreoPokedex.nivel,
+                                            edad: respuestasDatosIngreoPokedex.edad
+                                        };
+                                        contador = contador + 1;
+                                        arregloDePokedex.push(nuevoRegistroUno);
+                                        return [3 /*break*/, 9];
+                                    case 3: return [4 /*yield*/, prompts({
+                                            type: 'text',
+                                            name: 'nombre',
+                                            message: 'Buscar por ID o por NOMBRE'
+                                        })];
+                                    case 4:
+                                        buscar_1 = _b.sent();
+                                        estudianteEncontrado = arregloDePokedex
+                                            .find(// return CONDICION
+                                        function (valorActual) {
+                                            return valorActual.nombre == buscar_1.nombre;
+                                        });
+                                        console.log(estudianteEncontrado);
+                                        return [3 /*break*/, 9];
+                                    case 5: return [3 /*break*/, 9];
+                                    case 6:
+                                        console.log('Cual usuario quieres Editar?');
+                                        console.log(arregloDePokedex);
+                                        return [4 /*yield*/, prompts({
+                                                type: 'number',
+                                                name: 'id',
+                                                message: 'Ingresa el ID del registro a Editar'
+                                            })];
+                                    case 7:
+                                        idABuscar_1 = _b.sent();
+                                        indiceEncontrado = arregloDePokedex.findIndex(// return CONDICION ->
+                                        function (valorActual, indice, arreglo) {
+                                            return valorActual.id == idABuscar_1.id; // Nos devuelve el INDICE
+                                        } // Si encuentra nos devuelve el indice
+                                        // No encuentra
+                                        );
+                                        console.log('Indice encontrado:', indiceEncontrado);
+                                        return [4 /*yield*/, prompts({
+                                                type: 'text',
+                                                name: 'nombre',
+                                                message: 'Ingresa el nuevo nombre'
+                                            })];
+                                    case 8:
+                                        nombreAEditar = _b.sent();
+                                        arregloDePokedex[indiceEncontrado].nombre = nombreAEditar.nombre;
+                                        console.log(arregloDePokedex);
+                                        return [3 /*break*/, 9];
+                                    case 9: return [2 /*return*/];
                                 }
                             });
-                            minimoID_1 = minimoID_1 + 1;
-                            contador = minimoID_1;
-                            arregloDePokedex = archivoDatosPokemon;
-                            datosIngreoPokedex = [
-                                {
-                                    type: 'text',
-                                    name: 'apodo',
-                                    message: 'Ingresa el apodo del pokemon'
-                                },
-                                {
-                                    type: 'text',
-                                    name: 'nombre',
-                                    message: 'Ingresa el nombre del pokemon'
-                                },
-                                {
-                                    type: 'text',
-                                    name: 'tipo',
-                                    message: 'Ingresa el tipo del pokemon'
-                                },
-                                {
-                                    type: 'text',
-                                    name: 'nivel',
-                                    message: 'Ingresa el nivel del pokemon'
-                                },
-                                {
-                                    type: 'text',
-                                    name: 'edad',
-                                    message: 'Ingresa la edad en meses del pokemon'
-                                }
-                            ];
-                            return [4 /*yield*/, prompts(datosIngreoPokedex)];
-                        case 2:
-                            respuestasDatosIngreoPokedex = _b.sent();
-                            nuevoRegistroUno = {
-                                id: contador,
-                                apodo: respuestasDatosIngreoPokedex.apodo,
-                                nombre: respuestasDatosIngreoPokedex.nombre,
-                                tipo: respuestasDatosIngreoPokedex.tipo,
-                                nivel: respuestasDatosIngreoPokedex.nivel,
-                                edad: respuestasDatosIngreoPokedex.edad
-                            };
-                            contador = contador + 1;
-                            arregloDePokedex.push(nuevoRegistroUno);
-                            return [3 /*break*/, 9];
-                        case 3: return [4 /*yield*/, prompts({
-                                type: 'text',
-                                name: 'nombre',
-                                message: 'Buscar por ID o por NOMBRE'
-                            })];
-                        case 4:
-                            buscar_1 = _b.sent();
-                            estudianteEncontrado = arregloDePokedex
-                                .find(// return CONDICION
-                            function (valorActual) {
-                                return valorActual.nombre == buscar_1.nombre;
-                            });
-                            console.log(estudianteEncontrado);
-                            return [3 /*break*/, 9];
-                        case 5: return [3 /*break*/, 9];
-                        case 6:
-                            console.log('Cual usuario quieres Editar?');
-                            console.log(arregloDePokedex);
-                            return [4 /*yield*/, prompts({
-                                    type: 'number',
-                                    name: 'id',
-                                    message: 'Ingresa el ID del registro a Editar'
-                                })];
-                        case 7:
-                            idABuscar_1 = _b.sent();
-                            indiceEncontrado = arregloDePokedex.findIndex(// return CONDICION ->
-                            function (valorActual, indice, arreglo) {
-                                return valorActual.id == idABuscar_1.id; // Nos devuelve el INDICE
-                            } // Si encuentra nos devuelve el indice
-                            // No encuentra
-                            );
-                            console.log('Indice encontrado:', indiceEncontrado);
-                            return [4 /*yield*/, prompts({
-                                    type: 'text',
-                                    name: 'nombre',
-                                    message: 'Ingresa el nuevo nombre'
-                                })];
-                        case 8:
-                            nombreAEditar = _b.sent();
-                            arregloDePokedex[indiceEncontrado].nombre = nombreAEditar.nombre;
-                            console.log(arregloDePokedex);
-                            return [3 /*break*/, 9];
-                        case 9: return [2 /*return*/];
+                        });
+                    }];
+                case 2:
+                    _a.sent();
+                    _a.label = 3;
+                case 3:
+                    if (accion != 5) return [3 /*break*/, 1];
+                    _a.label = 4;
+                case 4:
+                    {
+                        console.log('bye bye');
                     }
-                });
-            });
-        }
-        pokedex().then().catch();
-    } while (accion != 5);
-    {
-        console.log('bye bye');
-    }
+                    return [2 /*return*/];
+            }
+        });
+    });
 }
-main();
+main().then().catch();
 // ------------------------------------- funcion --------------------------------------

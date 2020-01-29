@@ -16,7 +16,7 @@ import * as prompts from 'prompts';
 
 
 // ------------------------------------ programa --------------------------------------
-function main(){
+async function main(){
 
     //muestra logo pokemon
     const logoPokemon = leer('./logo.txt');
@@ -43,14 +43,16 @@ function main(){
         }
     ];
 */
-    const respuestaAccion: string = prompt('Ingresa el numero de la accion que deseas realizar');
+  const respuestaAccion = prompts ('Ingresa el numero de la accion que deseas realizar');
+    const def = Number (respuestaAccion);
 
-    const accion = Number (respuestaAccion);
+    const accion = def;
     
 
     do{
 
-        async function pokedex(){
+        await async function pokedex(){ // falta un await para ser llamada
+            
             switch(accion){
             case 1:
                 const archivoDatosPokemon= JSON.parse(formatoDeDatos);
@@ -165,13 +167,13 @@ function main(){
             }
             
         } 
-        pokedex().then().catch();   
+        
     }while(accion != 5){
         console.log('bye bye')
     }
 
 }
 
-main();
+main().then().catch();  
 
 // ------------------------------------- funcion --------------------------------------
