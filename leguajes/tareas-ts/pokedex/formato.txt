@@ -1,0 +1,10 @@
+[
+    {
+        "id" : 001,
+        "apodo" : "latigo",
+        "nombre" : "bulbasur",
+        "tipo" : "planta",
+        "nivel" : 00,
+        "edad" : 00
+    }
+]
