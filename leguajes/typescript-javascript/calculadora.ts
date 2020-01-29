@@ -32,7 +32,8 @@ if ( operacionB  > = 1  &&  operacionB  <= 4 ) {
             consola . log ( numa  /  numb );
             romper ;
     }
-} más {
+} 
+else {
     if ( operacionB  > =  5  &&  operacionB  <= 5.01 ) {
     const numC =  prompt ( " Ingrese el valor de A del trinomio de la forma Ax ^ 2 + Bx + C " );
     const numc =  Número ( numC );
@@ -44,10 +45,10 @@ if ( operacionB  > = 1  &&  operacionB  <= 4 ) {
     consola . log ( " Su discrminante es: " , discriminante );
     if ( discriminante  > 0 ) {
         consol.log( " Si es factorizable, sus raices son Reales " );
-    } más {
+    } else {
         if ( discriminante  < 0 ) {
             consola . log ( " No es factorizable, sus raices son Imaginarias " );
-        } más {
+        } else {
                 consola . log ( " valores incorrectos " );
             }   
         }

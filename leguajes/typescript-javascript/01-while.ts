@@ -8,7 +8,7 @@ do{
         case 1:
             console.log('desayuno');
             break;
-        case 2:
+        case 2:  
             console.log('almuerzo');
             break;
         case 3:
