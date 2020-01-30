@@ -39,6 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var f_leer_1 = require("./f-leer");
 var prompts = require("prompts");
 var escribir_1 = require("./escribir");
+var pokedex_1 = require("./pokedex/pokedex");
 function agregar() {
     return __awaiter(this, void 0, void 0, function () {
         var formatoDeDatos, archivoDatosPokemon, contador, minimoID, arregloDePokedex, datosIngreoPokedex, respuestasDatosIngreoPokedex, nuevoRegistroUno, arreglo;
@@ -99,6 +100,10 @@ function agregar() {
                     contador = contador + 1;
                     arregloDePokedex.push(nuevoRegistroUno);
                     arreglo = JSON.stringify(arregloDePokedex);
+                    pokedex_1.main();
+                    return [4 /*yield*/, agregar];
+                case 2:
+                    _a.sent();
                     //
                     escribir_1.escribir('./arreglo.txt', arreglo);
                     return [2 /*return*/];

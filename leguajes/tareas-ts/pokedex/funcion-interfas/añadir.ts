@@ -2,7 +2,7 @@ import {leer} from './f-leer';
 import { estructuraDatosPokemon } from './formato-pokemon';
 import * as prompts from 'prompts';
 import {escribir} from './escribir';
-
+import {main} from './';
 
 export async function agregar(){
     
@@ -71,6 +71,8 @@ export async function agregar(){
     arregloDePokedex.push(nuevoRegistroUno);
 
     const arreglo = JSON.stringify(arregloDePokedex);
+    main();
+    await agregar;
 
     //
     escribir(
