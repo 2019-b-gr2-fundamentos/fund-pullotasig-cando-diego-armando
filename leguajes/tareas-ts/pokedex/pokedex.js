@@ -48,17 +48,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // ------------------------------------ librerias -------------------------------------
 var f_leer_1 = require("./funcion-interfas/f-leer");
 var prompts = require("prompts");
+var logoPokemon = f_leer_1.leer('./logo.txt');
+console.log(logoPokemon);
 // ------------------------------------ programa --------------------------------------
 function main() {
     return __awaiter(this, void 0, void 0, function () {
         function opciones() {
             return __awaiter(this, void 0, void 0, function () {
-                var pedirAccion, _a;
+                var pedirAccion, _a, logoPokemon_1;
                 return __generator(this, function (_b) {
                     switch (_b.label) {
                         case 0:
                             console.log('BIENVENIDO A LA POKEDEX');
                             console.log('QUE DESEA HACER');
+                            console.log('0.       VER POKEDEX');
                             console.log('1.       AÑADIR NUEVO POKEMON A LA POKEDEX');
                             console.log('2.       BUSCAR POKEMON EN LA POKEDEX');
                             console.log('3.       ELIMINAR POKEMON DE LA POKEDEX');
@@ -76,43 +79,65 @@ function main() {
                             _b.sent();
                             _a = pedirAccion.accion;
                             switch (_a) {
-                                case '1': return [3 /*break*/, 3];
-                                case '2': return [3 /*break*/, 5];
-                                case '3': return [3 /*break*/, 7];
-                                case '4': return [3 /*break*/, 8];
+                                case '0': return [3 /*break*/, 3];
+                                case '1': return [3 /*break*/, 5];
+                                case '2': return [3 /*break*/, 7];
+                                case '3': return [3 /*break*/, 9];
+                                case '4': return [3 /*break*/, 10];
+                                case '5': return [3 /*break*/, 12];
                             }
-                            return [3 /*break*/, 9];
-                        case 3: return [4 /*yield*/, agregar()];
+                            return [3 /*break*/, 13];
+                        case 3:
+                            logoPokemon_1 = f_leer_1.leer('./logo.txt');
+                            console.log(logoPokemon_1);
+                            ver();
+                            main();
+                            return [4 /*yield*/, main];
                         case 4:
                             _b.sent();
-                            return [3 /*break*/, 10];
+                            return [3 /*break*/, 15];
                         case 5:
-                            buscar();
-                            return [4 /*yield*/, buscar];
+                            agregar();
+                            return [4 /*yield*/, agregar];
                         case 6:
                             _b.sent();
-                            return [3 /*break*/, 10];
-                        case 7: return [3 /*break*/, 10];
+                            return [3 /*break*/, 15];
+                        case 7:
+                            buscar();
+                            return [4 /*yield*/, buscar];
                         case 8:
+                            _b.sent();
+                            return [3 /*break*/, 15];
+                        case 9: return [3 /*break*/, 15];
+                        case 10:
                             editar();
-                            return [3 /*break*/, 10];
-                        case 9:
-                            console.log('ffffffffffffffffff');
-                            _b.label = 10;
-                        case 10: return [2 /*return*/];
+                            return [4 /*yield*/, editar];
+                        case 11:
+                            _b.sent();
+                            return [3 /*break*/, 15];
+                        case 12:
+                            console.log('bye bye');
+                            return [3 /*break*/, 15];
+                        case 13:
+                            main();
+                            return [4 /*yield*/, main];
+                        case 14:
+                            _b.sent();
+                            return [3 /*break*/, 15];
+                        case 15: return [2 /*return*/];
                     }
                 });
             });
         }
         function buscar() {
             return __awaiter(this, void 0, void 0, function () {
-                var buscar, estudianteEncontrado, arreglo;
+                var buscar, estudianteEncontrado;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0: return [4 /*yield*/, prompts({
                                 type: 'text',
                                 name: 'nombre',
-                                message: 'Buscar por ID o por NOMBRE'
+                                message: 'escriba el nombre del pokemon'
                             })];
                         case 1:
                             buscar = _a.sent();
@@ -122,12 +147,10 @@ function main() {
                                 return valorActual.nombre == buscar.nombre;
                             });
                             console.log(estudianteEncontrado);
-                            arreglo = JSON.stringify(arregloDePokedex);
                             opciones();
                             return [4 /*yield*/, buscar];
                         case 2:
                             _a.sent();
-                            console.log(arregloDePokedex);
                             return [2 /*return*/];
                     }
                 });
@@ -146,7 +169,6 @@ function main() {
                             return [4 /*yield*/, agregar];
                         case 2:
                             _a.sent();
-                            console.log(arregloDePokedex);
                             return [2 /*return*/];
                     }
                 });
@@ -154,23 +176,25 @@ function main() {
         }
         function editar() {
             return __awaiter(this, void 0, void 0, function () {
-                var idABuscar, indiceEncontrado, datosIngreoPokedex, respuestasDatosIngreoPokedex, arreglo;
+                var nombreBuscar, nombreEncontrado, datosIngreoPokedex, respuestasDatosIngreoPokedex, arreglo;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0: return [4 /*yield*/, prompts({
-                                type: 'number',
-                                name: 'id',
-                                message: 'Ingresa el ID del registro a Editar'
+                                type: 'text',
+                                name: 'nombre',
+                                message: 'Ingresa el nombre del pookemon que deseas editar'
                             })];
                         case 1:
-                            idABuscar = _a.sent();
-                            indiceEncontrado = arregloDePokedex.findIndex(// return CONDICION ->
+                            nombreBuscar = _a.sent();
+                            nombreEncontrado = arregloDePokedex.findIndex(// return CONDICION ->
                             function (valorActual, indice, arreglo) {
-                                return valorActual.id == idABuscar.id; // Nos devuelve el INDICE
+                                return valorActual.nombre == nombreBuscar.nombre; // Nos devuelve el INDICE
                             } // Si encuentra nos devuelve el indice
                             // No encuentra
                             );
-                            console.log('Indice encontrado:', indiceEncontrado);
+                            if (nombreEncontrado = -1) {
+                            }
+                            console.log('Indice encontrado:', nombreEncontrado);
                             datosIngreoPokedex = [
                                 {
                                     type: 'text',
@@ -208,21 +232,34 @@ function main() {
                             return [4 /*yield*/, editar];
                         case 3:
                             _a.sent();
-                            console.log(arregloDePokedex);
                             return [2 /*return*/];
                     }
                 });
             });
         }
-        var logoPokemon, contador, arregloDePokedex, datosIngreoPokedex;
+        function ver() {
+            console.log(arregloDePokedex);
+        }
+        var formatoDeDatos, archivoDatosPokemon, contador, minimoID, arregloDePokedex, datosIngreoPokedex;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, f_leer_1.leer('./logo.txt')];
+                case 0:
+                    formatoDeDatos = f_leer_1.leer('./formato.txt');
+                    console.log(formatoDeDatos);
+                    archivoDatosPokemon = JSON.parse(formatoDeDatos);
+                    contador = 0;
+                    minimoID = 0;
+                    archivoDatosPokemon.forEach(function (valorActual) {
+                        var idActual = valorActual.id;
+                        if (idActual > minimoID) {
+                            minimoID = idActual;
+                        }
+                    });
+                    minimoID = minimoID + 1;
+                    contador = minimoID;
+                    return [4 /*yield*/, archivoDatosPokemon];
                 case 1:
-                    logoPokemon = _a.sent();
-                    console.log(logoPokemon);
-                    contador = 1;
-                    arregloDePokedex = [];
+                    arregloDePokedex = _a.sent();
                     datosIngreoPokedex = [
                         {
                             type: 'text',

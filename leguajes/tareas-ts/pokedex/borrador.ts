@@ -34,7 +34,7 @@ async function main(){
             function(valorActual){
                 const idActual =valorActual.id;
                 if (idActual>minimoID){
-                    minimoID = idActual
+                    minimoID = idActual   
                 }
 
             }
@@ -76,7 +76,7 @@ async function main(){
     const respuestaEstudianteUno = await prompts(datosIngreoPokedex);
     
     const nuevoRegistroUno = {
-        id: contador,
+        id: contador, 
         nombre: respuestaEstudianteUno.nombre
     };
     contador = contador + 1;

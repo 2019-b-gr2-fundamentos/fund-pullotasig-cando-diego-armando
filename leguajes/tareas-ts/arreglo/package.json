@@ -1,14 +1,14 @@
 {
-  "name": "pokedex",
+  "name": "arreglo",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "go": "(tsc new.ts --target ES5 || echo) && node new.js"
+    "go": "(tsc new.ts --target ES5 ||echo) && node new.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "prompts": "^2.3.0"
-  },
-  "description": ""
+  }
 }
