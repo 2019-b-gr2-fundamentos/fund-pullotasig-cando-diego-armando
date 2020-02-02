@@ -16,7 +16,7 @@ si se parcea algo y esta mal estructurado
     */
    let arregloCargadoDeArchivo; // undefined
    try{
-       const arregloCargadoDeArchivo= JSON.parse(contenidoArchivo);
+       arregloCargadoDeArchivo= JSON.parse(contenidoArchivo);
    }catch(error){
     arregloCargadoDeArchivo = [];
 

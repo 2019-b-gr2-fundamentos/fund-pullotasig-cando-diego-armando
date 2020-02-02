@@ -19,24 +19,35 @@ import { editar } from './funcion-interfas/editar';
 import {escribir} from './funcion-interfas/escribir';
 import { estructuraDatosPokemon } from './funcion-interfas/formato-pokemon';
 
+const logoPokemon = leer('./logo.txt');
+console.log(logoPokemon);
+
 
 // ------------------------------------ programa --------------------------------------
  async function main(){
 
-    const logoPokemon = await leer('./logo.txt');
-    console.log(logoPokemon);
-    //muestra formatoy ejemplo de datos de pokemon
+    const formatoDeDatos = leer('./formato.txt');
+    console.log(formatoDeDatos);
     
-    //console.log(formatoDeDatos, '\n');
-    
-    
-
-
+    const archivoDatosPokemon= JSON.parse(formatoDeDatos);
     //contador
-    let contador = 1;
-           
-    //definiendo arreglo
-    let arregloDePokedex: estructuraDatosPokemon[] = [];
+    let contador = 0;
+    let minimoID= 0;
+    archivoDatosPokemon.forEach( 
+
+            function(valorActual){
+                const idActual =valorActual.id;
+                if (idActual>minimoID){
+                    minimoID = idActual
+                }
+
+            }
+        );
+
+    minimoID = minimoID +1 ;
+    contador = minimoID;
+
+    let arregloDePokedex: estructuraDatosPokemon[] = await archivoDatosPokemon;
     //definiendo estructura de datos que se piden
     const datosIngreoPokedex = [
         { 
@@ -74,13 +85,14 @@ import { estructuraDatosPokemon } from './funcion-interfas/formato-pokemon';
 
         console.log('BIENVENIDO A LA POKEDEX');
         console.log('QUE DESEA HACER');
+        console.log('0.       VER POKEDEX');
         console.log('1.       AÑADIR NUEVO POKEMON A LA POKEDEX');
         console.log('2.       BUSCAR POKEMON EN LA POKEDEX');
         console.log('3.       ELIMINAR POKEMON DE LA POKEDEX');
         console.log('4.       EDITAR POKEMON DE LA POKEDEX');
         console.log('5.       SALIR DE LA POKEDEX');
 
-        let pedirAccion = await prompts (
+        let pedirAccion = prompts(
             { 
                 type: 'text',
                 name: 'accion',
@@ -90,23 +102,42 @@ import { estructuraDatosPokemon } from './funcion-interfas/formato-pokemon';
         await pedirAccion;  
 
         switch(pedirAccion.accion){
-            case '1':
-                await agregar();
-                
-                
+
+            case '0':
+                const logoPokemon = leer('./logo.txt');
+                console.log(logoPokemon);
+                ver(); 
+                main();
+                await main;
                 break;
+
+            case '1':
+                agregar(); 
+                await agregar;
+                break;
+
             case '2':
                 buscar();
                 await buscar;               
                 break;
+
             case '3':
-                
                 break;
+
             case '4':
                 editar(); 
+                await editar;
                 break;  
+            
+            case '5':
+                console.log('bye bye')
+                break;
+
             default:
-                console.log('ffffffffffffffffff');
+                main();
+                await main;
+
+                break; 
                 // reenviar al programa     
             }
     }
@@ -117,7 +148,7 @@ import { estructuraDatosPokemon } from './funcion-interfas/formato-pokemon';
         const buscar = await prompts({
             type: 'text',
             name: 'nombre',
-            message: 'Buscar por ID o por NOMBRE'
+            message: 'escriba el nombre del pokemon'
         });
         const estudianteEncontrado = arregloDePokedex
                 .find( // return CONDICION
@@ -126,41 +157,42 @@ import { estructuraDatosPokemon } from './funcion-interfas/formato-pokemon';
                     }
                 );
         console.log(estudianteEncontrado);
-    
-        const arreglo = JSON.stringify(arregloDePokedex);
-    
+     
         opciones();
         await buscar;
-        console.log(arregloDePokedex);
-    
     }
     
     async function agregar(){
+
+        
   
         let respuestasDatosIngreoPokedex: estructuraDatosPokemon = await prompts(datosIngreoPokedex);
         
         arregloDePokedex.push(respuestasDatosIngreoPokedex);
         opciones();
         await agregar;
-        console.log(arregloDePokedex);
+
     }
 
     async function editar(){
 
       
                 
-        const idABuscar = await prompts({
-            type: 'number',
-            name: 'id',
-            message: 'Ingresa el ID del registro a Editar'
+        const nombreBuscar = await prompts({
+            type: 'text',
+            name: 'nombre',
+            message: 'Ingresa el nombre del pookemon que deseas editar'
         })
-        const indiceEncontrado = arregloDePokedex.findIndex( // return CONDICION ->
+        let nombreEncontrado = arregloDePokedex.findIndex( // return CONDICION ->
             function (valorActual, indice, arreglo){
-                return valorActual.id == idABuscar.id; // Nos devuelve el INDICE
+                return valorActual.nombre == nombreBuscar.nombre; // Nos devuelve el INDICE
             } // Si encuentra nos devuelve el indice
             // No encuentra
         )
-        console.log('Indice encontrado:', indiceEncontrado);
+        if(nombreEncontrado = -1){
+
+        }
+        console.log('Indice encontrado:', nombreEncontrado);
         //
         const datosIngreoPokedex = [
             { 
@@ -199,8 +231,12 @@ import { estructuraDatosPokemon } from './funcion-interfas/formato-pokemon';
     
         opciones();
         await editar;
-        console.log(arregloDePokedex);
+
                    
+    }
+
+    function ver(){
+        console.log(arregloDePokedex);
     }
 
 }

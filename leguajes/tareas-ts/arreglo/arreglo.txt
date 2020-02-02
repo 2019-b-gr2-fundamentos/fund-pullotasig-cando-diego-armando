@@ -1,0 +1,1 @@
+[{"id":1,"nombre":{"nombre":"aaaaaaaaaaa"},"apodo":{"apodo":"aaaaaaaaaaaa"},"tipo":{"tipo":"aaaaaaaaaa"},"nivel":{"nivel":2222},"edad":{"edad":22222}},"",{"id":2,"nombre":"q","apodo":"q","tipo":"q","nivel":1223,"edad":121212}]
