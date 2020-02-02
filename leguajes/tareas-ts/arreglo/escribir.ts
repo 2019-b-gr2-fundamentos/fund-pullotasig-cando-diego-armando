@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-export function escribir(contenido :string, path :string){
+export function escribir(path :string, contenido :string){
     fs.writeFileSync(
         path,
         contenido,

@@ -36,30 +36,36 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var new_1 = require("./new");
 var leer_1 = require("./leer");
 var prompts = require("prompts");
-var new_1 = require("./new");
-function ver() {
+var escribir_1 = require("./escribir");
+function borrar() {
     return __awaiter(this, void 0, void 0, function () {
-        var baseDeDatos, formatoConvertido, espera;
+        var archivoleido, archivoCargado, archivoConEstructura, idBuscar, idModificar, arregloFinal;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    baseDeDatos = leer_1.leer('./arreglo.txt');
-                    formatoConvertido = JSON.parse(baseDeDatos);
-                    console.log(formatoConvertido);
-                    espera = prompts({
-                        type: 'text',
-                        name: 'accion',
-                        message: 'presione enter para continuar',
-                    });
-                    return [4 /*yield*/, espera];
+                    archivoleido = leer_1.leer('./arreglo.txt');
+                    archivoCargado = JSON.parse(archivoleido);
+                    archivoConEstructura = archivoCargado;
+                    return [4 /*yield*/, prompts({
+                            type: 'number',
+                            name: 'id',
+                            message: 'Ingresa el ID del pokemon que desea editar'
+                        })];
                 case 1:
-                    _a.sent();
+                    idBuscar = _a.sent();
+                    idModificar = archivoConEstructura.findIndex(function (valorActual) {
+                        return valorActual.id == idBuscar.id;
+                    });
+                    archivoConEstructura[idModificar] = '';
+                    arregloFinal = JSON.stringify(archivoConEstructura);
+                    escribir_1.escribir('./arreglo.txt', arregloFinal);
                     new_1.pokedex();
                     return [2 /*return*/];
             }
         });
     });
 }
-exports.ver = ver;
+exports.borrar = borrar;

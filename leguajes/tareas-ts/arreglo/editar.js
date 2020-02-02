@@ -36,83 +36,75 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var new_1 = require("./new");
 var leer_1 = require("./leer");
 var prompts = require("prompts");
 var escribir_1 = require("./escribir");
-var new_1 = require("./new");
-function agregar() {
+function editar() {
     return __awaiter(this, void 0, void 0, function () {
-        var formatoDeDatos, formatoConvertido, contador, minimoID, arregloDePokedex, datosIngresoPokedex, respuestasIngresar, nuevoRegistro, arregloFinal;
+        var archivoleido, archivoCargado, archivoConEstructura, idBuscar, idModificar, newApodo, newNombre, newTipo, newNivel, newEdad, arregloFinal;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    formatoDeDatos = leer_1.leer('./arreglo.txt');
-                    formatoConvertido = JSON.parse(formatoDeDatos);
-                    contador = 0;
-                    minimoID = 0;
-                    formatoConvertido.forEach(function (valorActual) {
-                        var idActual = valorActual.id;
-                        if (idActual > minimoID) {
-                            minimoID = idActual;
-                        }
+                    archivoleido = leer_1.leer('./arreglo.txt');
+                    archivoCargado = JSON.parse(archivoleido);
+                    archivoConEstructura = archivoCargado;
+                    return [4 /*yield*/, prompts({
+                            type: 'number',
+                            name: 'id',
+                            message: 'Ingresa el ID del pokemon que desea editar'
+                        })];
+                case 1:
+                    idBuscar = _a.sent();
+                    idModificar = archivoConEstructura.findIndex(function (valorActual) {
+                        return valorActual.id == idBuscar.id;
                     });
-                    minimoID = minimoID + 1;
-                    contador = minimoID;
-                    arregloDePokedex = formatoConvertido;
-                    datosIngresoPokedex = [
-                        {
+                    return [4 /*yield*/, prompts({
                             type: 'text',
                             name: 'apodo',
                             message: 'Ingresa el apodo del pokemon'
-                        },
-                        {
+                        })];
+                case 2:
+                    newApodo = _a.sent();
+                    archivoConEstructura[idModificar].apodo = newApodo;
+                    return [4 /*yield*/, prompts({
                             type: 'text',
                             name: 'nombre',
                             message: 'Ingresa el nombre del pokemon'
-                        },
-                        {
+                        })];
+                case 3:
+                    newNombre = _a.sent();
+                    archivoConEstructura[idModificar].nombre = newNombre;
+                    return [4 /*yield*/, prompts({
                             type: 'text',
                             name: 'tipo',
                             message: 'Ingresa el tipo del pokemon'
-                        },
-                        {
+                        })];
+                case 4:
+                    newTipo = _a.sent();
+                    archivoConEstructura[idModificar].tipo = newTipo;
+                    return [4 /*yield*/, prompts({
                             type: 'number',
                             name: 'nivel',
                             message: 'Ingresa el nivel del pokemon'
-                        },
-                        {
+                        })];
+                case 5:
+                    newNivel = _a.sent();
+                    archivoConEstructura[idModificar].nivel = newNivel;
+                    return [4 /*yield*/, prompts({
                             type: 'number',
                             name: 'edad',
                             message: 'Ingresa la edad en meses del pokemon'
-                        }
-                    ];
-                    return [4 /*yield*/, prompts(datosIngresoPokedex)];
-                case 1:
-                    respuestasIngresar = _a.sent();
-                    nuevoRegistro = {
-                        id: contador,
-                        nombre: respuestasIngresar.nombre,
-                        apodo: respuestasIngresar.apodo,
-                        tipo: respuestasIngresar.tipo,
-                        nivel: respuestasIngresar.nivel,
-                        edad: respuestasIngresar.edad
-                    };
-                    arregloDePokedex.push(nuevoRegistro);
-                    arregloFinal = JSON.stringify(arregloDePokedex);
+                        })];
+                case 6:
+                    newEdad = _a.sent();
+                    archivoConEstructura[idModificar].edad = newEdad;
+                    arregloFinal = JSON.stringify(archivoConEstructura);
                     escribir_1.escribir('./arreglo.txt', arregloFinal);
-                    /*
-                        console.log('primero',arregloFinal);
-                    
-                    const prueba = leer('./arreglo.txt');
-                   // console.log(formatoDeDatos);
-                
-                    let formatoPrueba = JSON.parse(prueba);
-                    console.log('segundo',formatoPrueba);
-                    */
                     new_1.pokedex();
                     return [2 /*return*/];
             }
         });
     });
 }
-exports.agregar = agregar;
+exports.editar = editar;

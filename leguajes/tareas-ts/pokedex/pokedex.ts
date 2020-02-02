@@ -51,11 +51,6 @@ console.log(logoPokemon);
     //definiendo estructura de datos que se piden
     const datosIngreoPokedex = [
         { 
-            type: 'number',
-            name: 'id'
-
-        },
-        { 
             type: 'text',
             name: 'apodo',
             message: 'Ingresa el apodo del pokemon'

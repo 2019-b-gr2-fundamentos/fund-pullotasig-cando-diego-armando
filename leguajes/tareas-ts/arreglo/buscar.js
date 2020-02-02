@@ -36,30 +36,48 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var new_1 = require("./new");
 var leer_1 = require("./leer");
 var prompts = require("prompts");
-var new_1 = require("./new");
-function ver() {
+function buscar() {
     return __awaiter(this, void 0, void 0, function () {
-        var baseDeDatos, formatoConvertido, espera;
+        var archivoleido, archivoCargado, archivoConEstructura, idBuscar, idModificar, espera;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    baseDeDatos = leer_1.leer('./arreglo.txt');
-                    formatoConvertido = JSON.parse(baseDeDatos);
-                    console.log(formatoConvertido);
+                    archivoleido = leer_1.leer('./arreglo.txt');
+                    archivoCargado = JSON.parse(archivoleido);
+                    archivoConEstructura = archivoCargado;
+                    return [4 /*yield*/, prompts({
+                            type: 'number',
+                            name: 'id',
+                            message: 'Ingresa el ID del pokemon que desea editar'
+                        })];
+                case 1:
+                    idBuscar = _a.sent();
+                    idModificar = archivoConEstructura.findIndex(function (valorActual) {
+                        return valorActual.id == idBuscar.id;
+                    });
+                    if (!(idModificar != -1)) return [3 /*break*/, 3];
+                    console.log(archivoConEstructura[idModificar]);
                     espera = prompts({
                         type: 'text',
                         name: 'accion',
                         message: 'presione enter para continuar',
                     });
                     return [4 /*yield*/, espera];
-                case 1:
+                case 2:
                     _a.sent();
+                    return [3 /*break*/, 4];
+                case 3:
+                    console.log('id no encontrada');
+                    _a.label = 4;
+                case 4:
+                    ;
                     new_1.pokedex();
                     return [2 /*return*/];
             }
         });
     });
 }
-exports.ver = ver;
+exports.buscar = buscar;

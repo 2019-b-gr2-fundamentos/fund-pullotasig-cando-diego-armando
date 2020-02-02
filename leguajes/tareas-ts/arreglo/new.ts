@@ -10,10 +10,13 @@ nivel:
 import {ver} from './ver';
 import {agregar} from './agregar';
 import * as prompts from 'prompts';
+import { editar } from './editar';
+import {buscar} from './buscar';
+import {borrar} from './borrar'
 
 //----------------------------------------------------------------------------
 
-async function pokedex(){
+export async function pokedex(){
 
     console.log('1. ver');
     console.log('2. agregar');
@@ -26,52 +29,31 @@ async function pokedex(){
             { 
                 type: 'number',
                 name: 'accion',
-                message: 'Ingresa el numero de la accion que deseas realizar \n ',
+                message: 'Ingresa el numero de la accion que deseas realizar ',
             }
         );
     await pedirAccion;
-    
+
     switch(pedirAccion.accion){
         case 1:
             ver(); 
-            pokedex();
             break;
         case 2:
             agregar();
-            await agregar;
-
-            pokedex();
             break;
         case 3:
+            editar();
             break;    
         case 4:
+            buscar();
             break;
         case 5:
+            borrar();
             break;
-        case 6:
-            console.log('bye bye');
-            break; 
         default:
-            pokedex();
+            console.log('bye bye');        
             break;
-
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //console.log('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF');
+    }  
 }
 
 pokedex();

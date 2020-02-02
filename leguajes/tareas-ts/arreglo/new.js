@@ -47,12 +47,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ver_1 = require("./ver");
 var agregar_1 = require("./agregar");
 var prompts = require("prompts");
+var editar_1 = require("./editar");
+var buscar_1 = require("./buscar");
+var borrar_1 = require("./borrar");
 //----------------------------------------------------------------------------
 function pokedex() {
     return __awaiter(this, void 0, void 0, function () {
-        var pedirAccion, _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
+        var pedirAccion;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
                 case 0:
                     console.log('1. ver');
                     console.log('2. agregar');
@@ -63,50 +66,39 @@ function pokedex() {
                     return [4 /*yield*/, prompts({
                             type: 'number',
                             name: 'accion',
-                            message: 'Ingresa el numero de la accion que deseas realizar \n ',
+                            message: 'Ingresa el numero de la accion que deseas realizar ',
                         })];
                 case 1:
-                    pedirAccion = _b.sent();
+                    pedirAccion = _a.sent();
                     return [4 /*yield*/, pedirAccion];
                 case 2:
-                    _b.sent();
-                    _a = pedirAccion.accion;
-                    switch (_a) {
-                        case 1: return [3 /*break*/, 3];
-                        case 2: return [3 /*break*/, 4];
-                        case 3: return [3 /*break*/, 6];
-                        case 4: return [3 /*break*/, 7];
-                        case 5: return [3 /*break*/, 8];
-                        case 6: return [3 /*break*/, 9];
+                    _a.sent();
+                    switch (pedirAccion.accion) {
+                        case 1:
+                            ver_1.ver();
+                            break;
+                        case 2:
+                            agregar_1.agregar();
+                            break;
+                        case 3:
+                            editar_1.editar();
+                            break;
+                        case 4:
+                            buscar_1.buscar();
+                            break;
+                        case 5:
+                            borrar_1.borrar();
+                            break;
+                        default:
+                            console.log('bye bye');
+                            break;
                     }
-                    return [3 /*break*/, 10];
-                case 3:
-                    ver_1.ver();
-                    pokedex();
-                    return [3 /*break*/, 11];
-                case 4:
-                    agregar_1.agregar();
-                    return [4 /*yield*/, agregar_1.agregar];
-                case 5:
-                    _b.sent();
-                    pokedex();
-                    return [3 /*break*/, 11];
-                case 6: return [3 /*break*/, 11];
-                case 7: return [3 /*break*/, 11];
-                case 8: return [3 /*break*/, 11];
-                case 9:
-                    console.log('bye bye');
-                    return [3 /*break*/, 11];
-                case 10:
-                    pokedex();
-                    return [3 /*break*/, 11];
-                case 11:
-                    console.log('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF');
                     return [2 /*return*/];
             }
         });
     });
 }
+exports.pokedex = pokedex;
 pokedex();
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------

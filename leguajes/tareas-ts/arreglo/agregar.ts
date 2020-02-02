@@ -2,15 +2,18 @@ import {leer} from './leer';
 import {estructuraDatosPokemon} from './estructuraDato';
 import * as prompts from 'prompts';
 import { escribir } from './escribir';
+import {pokedex} from './new'
 
 export async function agregar(){
+    //console.log('inicio');
 
     const formatoDeDatos = leer('./arreglo.txt');
-    console.log('fffffff');
-    
+   // console.log(formatoDeDatos);
+
     let formatoConvertido = JSON.parse(formatoDeDatos);
+
+  //  console.log(formatoConvertido);
     //contador
-    console.log('fffffff');
     let contador = 0;
     let minimoID= 0;
     formatoConvertido.forEach( 
@@ -18,7 +21,7 @@ export async function agregar(){
             function(valorActual){
                 const idActual =valorActual.id;
                 if (idActual>minimoID){
-                    minimoID = idActual   
+                    minimoID = idActual
                 }
 
             }
@@ -26,9 +29,10 @@ export async function agregar(){
 
     minimoID = minimoID +1 ;
     contador = minimoID;
+    
     //definiendo arreglo
-    console.log('fffffff');
-    const arregloDePokedex: estructuraDatosPokemon[] = await formatoConvertido;
+   // console.log('fffffff');
+    const arregloDePokedex: estructuraDatosPokemon[] = formatoConvertido;
     //definiendo estructura de datos que se piden
     const datosIngresoPokedex = [
         { 
@@ -72,11 +76,21 @@ export async function agregar(){
     arregloDePokedex.push(nuevoRegistro);
 
     const arregloFinal = JSON.stringify(arregloDePokedex);
+
     escribir(
         './arreglo.txt',
         arregloFinal
     );
 
+    /*
+        console.log('primero',arregloFinal);
     
+    const prueba = leer('./arreglo.txt');
+   // console.log(formatoDeDatos);
+
+    let formatoPrueba = JSON.parse(prueba);
+    console.log('segundo',formatoPrueba);
+    */
+    pokedex();
 
 }
