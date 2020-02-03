@@ -49,9 +49,9 @@ function main(){
         function(valorACtual,i,arreglo){
             const nuevoObjeto = {
                 id: valorACtual.id,
-                nombre: valorACtual.nombre,
+/*                nombre: valorACtual.nombre,
     
-                nota20: valorACtual.nota*2
+                nota20: valorACtual.nota*2*/
 
             };
             return nuevoObjeto;
@@ -72,6 +72,7 @@ function main(){
         }
 
     );
+    
     console.log('respuestaFilter:', respuestaFilter);
     console.log('arreglo:', arregloEstudiante);
 

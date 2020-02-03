@@ -35,8 +35,6 @@ function main() {
     var respuestaMap = arregloEstudiante.map(function (valorACtual, i, arreglo) {
         var nuevoObjeto = {
             id: valorACtual.id,
-            nombre: valorACtual.nombre,
-            nota20: valorACtual.nota * 2
         };
         return nuevoObjeto;
     });
@@ -79,7 +77,8 @@ function main() {
     var respuestaReduce = arregloEstudiante.reduce(function (acumulador, valorActual, i, arr) {
         var calculo = acumulador + valorActual.nota; // suma resta o muchas cosas
         return calculo;
-    }, 100);
+    }, 0 // --------> valor inicial del acul
+    );
     console.log('respuestaReduce:', respuestaReduce);
     console.log('promedio del curso:', respuestaReduce / arregloEstudiante.length);
     console.log('arreglo:', arregloEstudiante);
