@@ -5,6 +5,8 @@ import { escribir } from './escribir';
 import {pokedex} from './new'
 
 export async function agregar(){
+    const archivole = leer('./logo.txt');
+    console.log(archivole);
     //console.log('inicio');
 
     const formatoDeDatos = leer('./arreglo.txt');

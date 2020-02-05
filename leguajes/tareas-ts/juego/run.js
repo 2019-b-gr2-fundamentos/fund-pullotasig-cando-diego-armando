@@ -54,66 +54,46 @@ function gato() {
     return __awaiter(this, void 0, void 0, function () {
         function juego() {
             return __awaiter(this, void 0, void 0, function () {
-                var quienEmpieza, empieza, yaGano, residuo;
+                var empieza, yaGano, residuo;
                 return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            console.log('1.                   jugar con "X"');
-                            console.log('2.                   jugar con "O"');
-                            return [4 /*yield*/, prompts({
-                                    type: 'number',
-                                    name: 'jugadorUno',
-                                    message: 'escriba 1 ó 2'
-                                })];
-                        case 1:
-                            quienEmpieza = _a.sent();
-                            empieza = quienEmpieza.jugadorUno;
-                            if (empieza != 1) {
-                                console.log('elija correctamente');
-                                juego();
-                                if (empieza != 2) {
-                                    console.log('elija correctamente');
-                                    juego();
-                                }
-                            }
-                            yaGano = false;
-                            do {
-                                /*
-                                 let empate =false;
-                                 if (empieza =9){
-                                     empate = true;
-                                     return empate;
-                                 }
-                                 let gano = false;
-                                 if(empate){
-                                     gano = true;
-                                     return gano;
-                                 }
-                                 let yaGano = gano || empate;
-                     */
-                                empieza = empieza + 1;
-                                residuo = empieza % 2;
-                                switch (residuo) {
-                                    case 0:
-                                        jugadorX();
-                                        break;
-                                    default:
-                                        jugadorO();
-                                        break;
-                                }
-                            } while (empieza > 9);
-                            {
-                                console.log('termino el juego');
-                            }
-                            ;
-                            return [2 /*return*/];
+                    empieza = 1;
+                    yaGano = false;
+                    do {
+                        /*
+                         let empate =false;
+                         if (empieza =9){
+                             empate = true;
+                             return empate;
+                         }
+                         let gano = false;
+                         if(empate){
+                             gano = true;
+                             return gano;
+                         }
+                         let yaGano = gano || empate;
+             */
+                        empieza = empieza + 1;
+                        residuo = empieza % 2;
+                        switch (residuo) {
+                            case 0:
+                                jugadorX();
+                                break;
+                            default:
+                                jugadorO();
+                                break;
+                        }
+                    } while (empieza > 9);
+                    {
+                        console.log('termino el juego');
                     }
+                    ;
+                    return [2 /*return*/];
                 });
             });
         }
         function jugadorX() {
             return __awaiter(this, void 0, void 0, function () {
-                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, respuestaMap, posicionGato, marca, a, arregloFinal;
+                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, formatofilter, respuestaMap, formatoMap, posicionGato, numero, marca, a, arregloFinal;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
@@ -124,29 +104,37 @@ function gato() {
                                 var valor = valorActual.valor < 1;
                                 return valor;
                             });
-                            respuestaMap = respuestaFilter.map(function (valorACtual) {
+                            formatofilter = respuestaFilter;
+                            respuestaMap = formatofilter.map(function (valorACtual) {
                                 var nuevoObjeto = {
                                     posicion: valorACtual.posicion,
                                 };
                                 return nuevoObjeto;
                             });
                             console.log(respuestaMap);
+                            formatoMap = respuestaMap;
                             return [4 /*yield*/, prompts({
                                     type: 'number',
-                                    nombre: 'posicion',
+                                    name: 'posicion',
                                     message: 'ingresa la posicion que desea marcar'
                                 })];
                         case 1:
                             posicionGato = _a.sent();
+                            console.log(posicionGato);
                             console.log(formatoCargado);
-                            marca = respuestaMap.findIndex(function (valorActual) {
-                                return valorActual.posicion == posicionGato.posicion;
+                            console.log(formatoMap);
+                            numero = Number(posicionGato.posicion);
+                            console.log(numero);
+                            marca = formatoMap.findIndex(function (valorActual) {
+                                return valorActual.posicion == numero;
                             });
                             console.log(marca);
+                            console.log(formatoCargado);
                             a = 1;
                             formatoCargado[marca].valor = a;
                             arregloFinal = JSON.stringify(formatoCargado);
                             escribir_1.escribir('./arreglo.txt', arregloFinal);
+                            juego();
                             return [2 /*return*/];
                     }
                 });
@@ -154,7 +142,7 @@ function gato() {
         }
         function jugadorO() {
             return __awaiter(this, void 0, void 0, function () {
-                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, respuestaMap, posicionGato, marca, a, arregloFinal;
+                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, formatofilter, respuestaMap, formatoMap, posicionGato, numero, marca, a, arregloFinal;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
@@ -162,45 +150,48 @@ function gato() {
                             archivoParseado = JSON.parse(archivoLeido);
                             formatoCargado = archivoParseado;
                             respuestaFilter = formatoCargado.filter(function (valorActual) {
-                                var valor0 = valorActual.valor = 0;
-                                return valor0;
+                                var valor = valorActual.valor < 1;
+                                return valor;
                             });
-                            respuestaMap = respuestaFilter.map(function (valorACtual) {
+                            formatofilter = respuestaFilter;
+                            respuestaMap = formatofilter.map(function (valorACtual) {
                                 var nuevoObjeto = {
                                     posicion: valorACtual.posicion,
                                 };
                                 return nuevoObjeto;
                             });
                             console.log(respuestaMap);
+                            formatoMap = respuestaMap;
                             return [4 /*yield*/, prompts({
                                     type: 'number',
-                                    nombre: 'posicion',
+                                    name: 'posicion',
                                     message: 'ingresa la posicion que desea marcar'
                                 })];
                         case 1:
                             posicionGato = _a.sent();
+                            console.log(posicionGato);
                             console.log(formatoCargado);
-                            marca = respuestaMap.findIndex(function (valorActual) {
-                                return valorActual.posicion == posicionGato.posicion;
+                            console.log(formatoMap);
+                            numero = Number(posicionGato.posicion);
+                            console.log(numero);
+                            marca = formatoMap.findIndex(function (valorActual) {
+                                return valorActual.posicion == numero;
                             });
                             console.log(marca);
+                            console.log(formatoCargado);
                             a = 1;
+                            formatoCargado[marca].valor = a;
                             arregloFinal = JSON.stringify(formatoCargado);
                             escribir_1.escribir('./arreglo.txt', arregloFinal);
+                            juego();
                             return [2 /*return*/];
                     }
                 });
             });
         }
-        function espaciosLibres() {
-            return __awaiter(this, void 0, void 0, function () {
-                return __generator(this, function (_a) {
-                    return [2 /*return*/];
-                });
-            });
-        }
         return __generator(this, function (_a) {
             juego();
+            ;
             return [2 /*return*/];
         });
     });

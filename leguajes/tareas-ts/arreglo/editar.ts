@@ -6,6 +6,8 @@ import {escribir} from './escribir'
 
 export async function editar(){
 
+    const archivole = leer('./logo.txt');
+    console.log(archivole);
     const archivoleido = leer('./arreglo.txt');
     const archivoCargado = JSON.parse(archivoleido);
     
@@ -17,8 +19,8 @@ export async function editar(){
         message: 'Ingresa el ID del pokemon que desea editar'
     });
     const idModificar = archivoConEstructura.findIndex(   
-        function (valorActual){
-            const valorActual.id == idBuscar.id; 
+        function (valorActual, indice, arreglo){
+            return valorActual.id == idBuscar.id; 
         } 
     );
     const newApodo = await prompts(

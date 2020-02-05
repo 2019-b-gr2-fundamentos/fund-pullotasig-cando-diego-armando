@@ -13,10 +13,14 @@ import * as prompts from 'prompts';
 import { editar } from './editar';
 import {buscar} from './buscar';
 import {borrar} from './borrar'
+import { leer } from './leer';
 
 //----------------------------------------------------------------------------
 
 export async function pokedex(){
+
+    const archivole = leer('./logo.txt');
+    console.log(archivole);
 
     console.log('1. ver');
     console.log('2. agregar');

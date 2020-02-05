@@ -41,10 +41,12 @@ var prompts = require("prompts");
 var new_1 = require("./new");
 function ver() {
     return __awaiter(this, void 0, void 0, function () {
-        var baseDeDatos, formatoConvertido, espera;
+        var archivole, baseDeDatos, formatoConvertido, espera;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    archivole = leer_1.leer('./logo.txt');
+                    console.log(archivole);
                     baseDeDatos = leer_1.leer('./arreglo.txt');
                     formatoConvertido = JSON.parse(baseDeDatos);
                     console.log(formatoConvertido);

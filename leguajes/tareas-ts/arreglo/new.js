@@ -50,13 +50,16 @@ var prompts = require("prompts");
 var editar_1 = require("./editar");
 var buscar_1 = require("./buscar");
 var borrar_1 = require("./borrar");
+var leer_1 = require("./leer");
 //----------------------------------------------------------------------------
 function pokedex() {
     return __awaiter(this, void 0, void 0, function () {
-        var pedirAccion;
+        var archivole, pedirAccion;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    archivole = leer_1.leer('./logo.txt');
+                    console.log(archivole);
                     console.log('1. ver');
                     console.log('2. agregar');
                     console.log('3. editar');

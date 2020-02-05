@@ -3,6 +3,7 @@ import * as prompts from 'prompts';
 import {leer} from '../arreglo/leer';
 import { estructuraArreglo } from './estructura';
 import { escribir } from '../arreglo/escribir';
+import { estructura2 } from './estructura2';
 
 
 //-------------------
@@ -27,6 +28,7 @@ async function gato(){
 
 
     async function juego(){
+        /*
         console.log('1.                   jugar con "X"');
         console.log('2.                   jugar con "O"');
         const quienEmpieza = await prompts (
@@ -44,56 +46,41 @@ async function gato(){
                 console.log('elija correctamente');
                 juego();
             }
-        }
+        }*/
         //console.log('fffffffffffff');
+        let empieza = 1;
         let yaGano = false;
         do{
-           /*
-            let empate =false;
-            if (empieza =9){
-                empate = true;
-                return empate;
-            }
-            let gano = false;
-            if(empate){
-                gano = true;
-                return gano;
-            }
-            let yaGano = gano || empate;
-*/
+
             empieza = empieza + 1;
             let residuo: Number = empieza % 2;
 
-
             switch(residuo){
-                case 0:
-                    
+                case 0:                    
                     jugadorX();
                     break;
-                default:
-                   
+                default:                   
                     jugadorO();
                     break;    
             }
 
         }while(empieza >9){
             console.log('termino el juego');
-        };
-        
+        };        
     }
     async function jugadorX(){
         let archivoLeido = leer('./arreglo.txt');
-    let archivoParseado = JSON.parse(archivoLeido);
-    let formatoCargado: estructuraArreglo[] = archivoParseado;
+        let archivoParseado = JSON.parse(archivoLeido);
+        let formatoCargado: estructuraArreglo[] = archivoParseado;
         const respuestaFilter = formatoCargado.filter(
             function(valorActual){
                 const valor = valorActual.valor < 1;
                 return valor;
             }
         );
-        //console.log(respuestaFilter);
+        let formatofilter: estructuraArreglo[] = respuestaFilter;
     
-        const respuestaMap =  respuestaFilter.map(
+        const respuestaMap =  formatofilter.map(
             function(valorACtual){
                 const nuevoObjeto = {
                     posicion: valorACtual.posicion,
@@ -101,89 +88,48 @@ async function gato(){
                 return nuevoObjeto;
             }
         );
-    
-        console.log(respuestaMap);
+   
+        const formatoMap: estructura2[] = respuestaMap;
     
         let posicionGato = await prompts(
             {
                 type: 'number',
-                nombre: 'posicion',
+                name: 'posicion',
                 message: 'ingresa la posicion que desea marcar'
             }
         );
-        console.log(formatoCargado);
 
-        const marca = respuestaMap.findIndex(
+        const numero = Number (posicionGato.posicion);
+
+        const marca = formatoMap.findIndex(
             function (valorActual){
-                return valorActual.posicion == posicionGato.posicion; 
+                return valorActual.posicion == numero; 
             } 
         );
-        console.log(marca);
+//-----------------------------------------------------------
+        if(){
+
+        }
 
         const a = 1;
         formatoCargado[marca].valor = a;
-
         const arregloFinal = JSON.stringify(formatoCargado);
 
     escribir(
         './arreglo.txt',
         arregloFinal
     );
+    juego();
     }
 
     async function jugadorO(){
-        let archivoLeido = leer('./arreglo.txt');
-    let archivoParseado = JSON.parse(archivoLeido);
-    let formatoCargado: estructuraArreglo[] = archivoParseado;
-        const respuestaFilter = formatoCargado.filter(
-            function(valorActual){
-                const valor0 = valorActual.valor = 0;
-                return valor0;
-            }
-        );
+
+    };
+
     
-        const respuestaMap =  respuestaFilter.map(
-            function(valorACtual){
-                const nuevoObjeto = {
-                    posicion: valorACtual.posicion,
-                };
-                return nuevoObjeto;
-            }
-        );
-    
-        console.log(respuestaMap);
-    
-        let posicionGato = await prompts(
-            {
-                type: 'number',
-                nombre: 'posicion',
-                message: 'ingresa la posicion que desea marcar'
-            }
-        );
-        console.log(formatoCargado);
-
-        const marca = respuestaMap.findIndex(
-            function (valorActual){
-                return valorActual.posicion == posicionGato.posicion; 
-            } 
-        );
-        console.log(marca);
-
-        const a = 1;
-       
-
-        const arregloFinal = JSON.stringify(formatoCargado);
-
-    escribir(
-        './arreglo.txt',
-        arregloFinal
-    );
-    }
-
-    async function espaciosLibres(){
         
     
-    }
+    
 }
 
 gato();

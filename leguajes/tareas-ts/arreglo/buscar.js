@@ -41,10 +41,12 @@ var leer_1 = require("./leer");
 var prompts = require("prompts");
 function buscar() {
     return __awaiter(this, void 0, void 0, function () {
-        var archivoleido, archivoCargado, archivoConEstructura, idBuscar, idModificar, espera;
+        var archivole, archivoleido, archivoCargado, archivoConEstructura, idBuscar, idModificar, espera;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    archivole = leer_1.leer('./logo.txt');
+                    console.log(archivole);
                     archivoleido = leer_1.leer('./arreglo.txt');
                     archivoCargado = JSON.parse(archivoleido);
                     archivoConEstructura = archivoCargado;

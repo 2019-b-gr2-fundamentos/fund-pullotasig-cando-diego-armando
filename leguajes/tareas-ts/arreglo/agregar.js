@@ -42,10 +42,12 @@ var escribir_1 = require("./escribir");
 var new_1 = require("./new");
 function agregar() {
     return __awaiter(this, void 0, void 0, function () {
-        var formatoDeDatos, formatoConvertido, contador, minimoID, arregloDePokedex, datosIngresoPokedex, respuestasIngresar, nuevoRegistro, arregloFinal;
+        var archivole, formatoDeDatos, formatoConvertido, contador, minimoID, arregloDePokedex, datosIngresoPokedex, respuestasIngresar, nuevoRegistro, arregloFinal;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    archivole = leer_1.leer('./logo.txt');
+                    console.log(archivole);
                     formatoDeDatos = leer_1.leer('./arreglo.txt');
                     formatoConvertido = JSON.parse(formatoDeDatos);
                     contador = 0;

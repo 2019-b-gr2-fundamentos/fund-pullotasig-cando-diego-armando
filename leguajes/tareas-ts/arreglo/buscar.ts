@@ -4,6 +4,8 @@ import {estructuraDatosPokemon} from './estructuraDato';
 import * as prompts from 'prompts';
 
 export async function buscar(){
+    const archivole = leer('./logo.txt');
+    console.log(archivole);
     const archivoleido = leer('./arreglo.txt');
     const archivoCargado = JSON.parse(archivoleido);
     
