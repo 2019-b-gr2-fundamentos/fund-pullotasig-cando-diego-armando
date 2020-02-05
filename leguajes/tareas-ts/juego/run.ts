@@ -1,5 +1,8 @@
 //-------------------
 import * as prompts from 'prompts';
+import {leer} from '../arreglo/leer';
+import { estructuraArreglo } from './estructura';
+import { escribir } from '../arreglo/escribir';
 
 
 //-------------------
@@ -7,53 +10,184 @@ import * as prompts from 'prompts';
 console.log();
 // bienvenida
 console.log();
+let archivoLeido = leer('./formato-base.txt');
+    let archivoParseado = JSON.parse(archivoLeido);
+    let copia: estructuraArreglo[] = archivoParseado;
+    const arregloFinal = JSON.stringify(copia);
 
-async function gato(){
-    // matriz original
-    let arregloGato = Array([0,0,0],[0,0,0],[0,0,0]);
-    // console.log(arregloGato);
-    
-    let posicion = await prompts(
-        {
-            type: 'number',
-            nombre: 'posicionGato',
-            message: 'ingresa la posicion donde desea marcar'
-
-        }
+    escribir(
+        './arreglo.txt',
+        arregloFinal
     );
 
-
+async function gato(){
     
-// dos arreglos uno esta llenos de ceros y otro esta con las imagenes y los comparamos
-// falta secuencia para intecalar x y o
     
+    juego();
 
+
+    async function juego(){
+        console.log('1.                   jugar con "X"');
+        console.log('2.                   jugar con "O"');
+        const quienEmpieza = await prompts (
+            {
+                type: 'number',
+                name: 'jugadorUno',
+                message: 'escriba 1 ó 2'
+            }
+        );
+        const empieza: number = quienEmpieza.jugadorUno;
+        if(empieza!= 1){
+            console.log('elija correctamente');
+            juego();
+            if(empieza!= 2){
+                console.log('elija correctamente');
+                juego();
+            }
+        }
+        //console.log('fffffffffffff');
+        let yaGano = false;
+        do{
+           /*
+            let empate =false;
+            if (empieza =9){
+                empate = true;
+                return empate;
+            }
+            let gano = false;
+            if(empate){
+                gano = true;
+                return gano;
+            }
+            let yaGano = gano || empate;
+*/
+            empieza = empieza + 1;
+            let residuo: Number = empieza % 2;
+
+
+            switch(residuo){
+                case 0:
+                    
+                    jugadorX();
+                    break;
+                default:
+                   
+                    jugadorO();
+                    break;    
+            }
+
+        }while(empieza >9){
+            console.log('termino el juego');
+        };
+        
+    }
+    async function jugadorX(){
+        let archivoLeido = leer('./arreglo.txt');
+    let archivoParseado = JSON.parse(archivoLeido);
+    let formatoCargado: estructuraArreglo[] = archivoParseado;
+        const respuestaFilter = formatoCargado.filter(
+            function(valorActual){
+                const valor = valorActual.valor < 1;
+                return valor;
+            }
+        );
+        //console.log(respuestaFilter);
+    
+        const respuestaMap =  respuestaFilter.map(
+            function(valorACtual){
+                const nuevoObjeto = {
+                    posicion: valorACtual.posicion,
+                };
+                return nuevoObjeto;
+            }
+        );
+    
+        console.log(respuestaMap);
+    
+        let posicionGato = await prompts(
+            {
+                type: 'number',
+                nombre: 'posicion',
+                message: 'ingresa la posicion que desea marcar'
+            }
+        );
+        console.log(formatoCargado);
+
+        const marca = respuestaMap.findIndex(
+            function (valorActual){
+                return valorActual.posicion == posicionGato.posicion; 
+            } 
+        );
+        console.log(marca);
+
+        const a = 1;
+        formatoCargado[marca].valor = a;
+
+        const arregloFinal = JSON.stringify(formatoCargado);
+
+    escribir(
+        './arreglo.txt',
+        arregloFinal
+    );
+    }
+
+    async function jugadorO(){
+        let archivoLeido = leer('./arreglo.txt');
+    let archivoParseado = JSON.parse(archivoLeido);
+    let formatoCargado: estructuraArreglo[] = archivoParseado;
+        const respuestaFilter = formatoCargado.filter(
+            function(valorActual){
+                const valor0 = valorActual.valor = 0;
+                return valor0;
+            }
+        );
+    
+        const respuestaMap =  respuestaFilter.map(
+            function(valorACtual){
+                const nuevoObjeto = {
+                    posicion: valorACtual.posicion,
+                };
+                return nuevoObjeto;
+            }
+        );
+    
+        console.log(respuestaMap);
+    
+        let posicionGato = await prompts(
+            {
+                type: 'number',
+                nombre: 'posicion',
+                message: 'ingresa la posicion que desea marcar'
+            }
+        );
+        console.log(formatoCargado);
+
+        const marca = respuestaMap.findIndex(
+            function (valorActual){
+                return valorActual.posicion == posicionGato.posicion; 
+            } 
+        );
+        console.log(marca);
+
+        const a = 1;
+       
+
+        const arregloFinal = JSON.stringify(formatoCargado);
+
+    escribir(
+        './arreglo.txt',
+        arregloFinal
+    );
+    }
+
+    async function espaciosLibres(){
+        
+    
+    }
 }
 
 gato();
 /*
-corrida(){
-    if(){
-        if(){
-            if(){
-                if(){
-
-                }else{
-                    
-                }
-
-            }else{
-                
-            }
-
-        }else{
-            
-        }
-        
-    }else{
-        
-    }
-}
 // filter para buscar los iguales a cero y luego
 // necesitamos un map para imprimir solo los que se pueden modificar
 

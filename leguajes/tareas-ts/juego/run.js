@@ -37,18 +37,246 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 //-------------------
+var prompts = require("prompts");
+var leer_1 = require("../arreglo/leer");
+var escribir_1 = require("../arreglo/escribir");
+//-------------------
 // logo
 console.log();
 // bienvenida
 console.log();
+var archivoLeido = leer_1.leer('./formato-base.txt');
+var archivoParseado = JSON.parse(archivoLeido);
+var copia = archivoParseado;
+var arregloFinal = JSON.stringify(copia);
+escribir_1.escribir('./arreglo.txt', arregloFinal);
 function gato() {
     return __awaiter(this, void 0, void 0, function () {
-        var arregloGato;
+        function juego() {
+            return __awaiter(this, void 0, void 0, function () {
+                var quienEmpieza, empieza, yaGano, residuo;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            console.log('1.                   jugar con "X"');
+                            console.log('2.                   jugar con "O"');
+                            return [4 /*yield*/, prompts({
+                                    type: 'number',
+                                    name: 'jugadorUno',
+                                    message: 'escriba 1 ó 2'
+                                })];
+                        case 1:
+                            quienEmpieza = _a.sent();
+                            empieza = quienEmpieza.jugadorUno;
+                            if (empieza != 1) {
+                                console.log('elija correctamente');
+                                juego();
+                                if (empieza != 2) {
+                                    console.log('elija correctamente');
+                                    juego();
+                                }
+                            }
+                            yaGano = false;
+                            do {
+                                /*
+                                 let empate =false;
+                                 if (empieza =9){
+                                     empate = true;
+                                     return empate;
+                                 }
+                                 let gano = false;
+                                 if(empate){
+                                     gano = true;
+                                     return gano;
+                                 }
+                                 let yaGano = gano || empate;
+                     */
+                                empieza = empieza + 1;
+                                residuo = empieza % 2;
+                                switch (residuo) {
+                                    case 0:
+                                        jugadorX();
+                                        break;
+                                    default:
+                                        jugadorO();
+                                        break;
+                                }
+                            } while (empieza > 9);
+                            {
+                                console.log('termino el juego');
+                            }
+                            ;
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        }
+        function jugadorX() {
+            return __awaiter(this, void 0, void 0, function () {
+                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, respuestaMap, posicionGato, marca, a, arregloFinal;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            archivoLeido = leer_1.leer('./arreglo.txt');
+                            archivoParseado = JSON.parse(archivoLeido);
+                            formatoCargado = archivoParseado;
+                            respuestaFilter = formatoCargado.filter(function (valorActual) {
+                                var valor = valorActual.valor < 1;
+                                return valor;
+                            });
+                            respuestaMap = respuestaFilter.map(function (valorACtual) {
+                                var nuevoObjeto = {
+                                    posicion: valorACtual.posicion,
+                                };
+                                return nuevoObjeto;
+                            });
+                            console.log(respuestaMap);
+                            return [4 /*yield*/, prompts({
+                                    type: 'number',
+                                    nombre: 'posicion',
+                                    message: 'ingresa la posicion que desea marcar'
+                                })];
+                        case 1:
+                            posicionGato = _a.sent();
+                            console.log(formatoCargado);
+                            marca = respuestaMap.findIndex(function (valorActual) {
+                                return valorActual.posicion == posicionGato.posicion;
+                            });
+                            console.log(marca);
+                            a = 1;
+                            formatoCargado[marca].valor = a;
+                            arregloFinal = JSON.stringify(formatoCargado);
+                            escribir_1.escribir('./arreglo.txt', arregloFinal);
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        }
+        function jugadorO() {
+            return __awaiter(this, void 0, void 0, function () {
+                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, respuestaMap, posicionGato, marca, a, arregloFinal;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            archivoLeido = leer_1.leer('./arreglo.txt');
+                            archivoParseado = JSON.parse(archivoLeido);
+                            formatoCargado = archivoParseado;
+                            respuestaFilter = formatoCargado.filter(function (valorActual) {
+                                var valor0 = valorActual.valor = 0;
+                                return valor0;
+                            });
+                            respuestaMap = respuestaFilter.map(function (valorACtual) {
+                                var nuevoObjeto = {
+                                    posicion: valorACtual.posicion,
+                                };
+                                return nuevoObjeto;
+                            });
+                            console.log(respuestaMap);
+                            return [4 /*yield*/, prompts({
+                                    type: 'number',
+                                    nombre: 'posicion',
+                                    message: 'ingresa la posicion que desea marcar'
+                                })];
+                        case 1:
+                            posicionGato = _a.sent();
+                            console.log(formatoCargado);
+                            marca = respuestaMap.findIndex(function (valorActual) {
+                                return valorActual.posicion == posicionGato.posicion;
+                            });
+                            console.log(marca);
+                            a = 1;
+                            arregloFinal = JSON.stringify(formatoCargado);
+                            escribir_1.escribir('./arreglo.txt', arregloFinal);
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        }
+        function espaciosLibres() {
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    return [2 /*return*/];
+                });
+            });
+        }
         return __generator(this, function (_a) {
-            arregloGato = Array([0, 0, 0], [0, 0, 0], [0, 0, 0]);
-            console.log(arregloGato);
+            juego();
             return [2 /*return*/];
         });
     });
 }
 gato();
+/*
+// filter para buscar los iguales a cero y luego
+// necesitamos un map para imprimir solo los que se pueden modificar
+
+en la validadacion de ganador tendremos las posiciones de ganador || y otra || etc
+
+llamamos a txt gandor o || x
+
+verificacion de espacios libres()
+// .filter ---> filtrar el arreglo (condicion ---> devuelve un arreglo con valores filtrados)
+    const respuestaFilter = arregloEstudiante
+    .filter(
+        function(valorActual,i,arreglo){
+            const condicion = valorActual.nota0 = 0;
+
+            return condicion
+
+        }
+
+    );
+//.map ---> transformamos el arreglo (mutamos el arreglo)
+    
+    const respuestaMap =  respuestaFilter.map(
+        function(valorACtual,i,arreglo){
+            const nuevoObjeto = {
+                id: valorACtual.id,
+            };
+            return nuevoObjeto;
+        }
+    );
+
+    respuesta map
+
+    let posicion = await prompts(
+        {
+            type: 'number',
+            nombre: 'posicionGato',
+            message: 'ingresa la posicion donde desea marcar'
+
+        }
+    );
+
+    const idModificar = archivoConEstructura.findIndex( // identificamos
+        function (valorActual){
+            return valorActual.id == idBuscar.id;
+        }
+    );
+     posicion
+     |
+     |
+     |
+     |
+     °
+     pasamos a las funciones añadir
+
+añadirX(){
+    recibimos = posicion;
+    arregloGato[posicion] = 1
+
+}
+
+añadir0(){
+    recibimos = posicion;
+    arregloGato[posicion] = 2
+
+}
+
+
+
+// uso leer un txt
+y despues lo guardo en una dirrecion la cual voy a modificar y despues
+con escribir lo guardo en un nuevo archivo
+solamente uso en primer txt como un formato para el inico de la programa
+*/ 

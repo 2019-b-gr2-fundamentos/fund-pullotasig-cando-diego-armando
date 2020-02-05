@@ -16,9 +16,9 @@ export async function editar(){
         name: 'id',
         message: 'Ingresa el ID del pokemon que desea editar'
     });
-    const idModificar = archivoConEstructura.findIndex(
+    const idModificar = archivoConEstructura.findIndex(   
         function (valorActual){
-            return valorActual.id == idBuscar.id; 
+            const valorActual.id == idBuscar.id; 
         } 
     );
     const newApodo = await prompts(

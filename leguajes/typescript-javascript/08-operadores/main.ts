@@ -58,7 +58,7 @@ function main(){
         }
     );
     console.log('respuestaMap:', respuestaMap);
-    console.log('arreglo:', arregloEstudiante);
+    console.log('arreglo:', arregloEstudiante); 
 
     // .filter ---> filtrar el arreglo (condicion ---> devuelve un arreglo con valores filtrados)
     const respuestaFilter = arregloEstudiante
