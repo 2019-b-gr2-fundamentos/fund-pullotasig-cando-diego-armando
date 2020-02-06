@@ -24,51 +24,127 @@ let archivoLeido = leer('./formato-base.txt');
 async function gato(){
     
     
+    
+
+    let empieza = 0;
+    let yaGano = false;
+
     juego();
-
-
     async function juego(){
-        /*
-        console.log('1.                   jugar con "X"');
-        console.log('2.                   jugar con "O"');
-        const quienEmpieza = await prompts (
-            {
-                type: 'number',
-                name: 'jugadorUno',
-                message: 'escriba 1 ó 2'
-            }
-        );
-        const empieza: number = quienEmpieza.jugadorUno;
-        if(empieza!= 1){
-            console.log('elija correctamente');
-            juego();
-            if(empieza!= 2){
-                console.log('elija correctamente');
-                juego();
-            }
-        }*/
-        //console.log('fffffffffffff');
-        let empieza = 1;
-        let yaGano = false;
+        
+        
         do{
 
             empieza = empieza + 1;
-            let residuo: Number = empieza % 2;
-
+            console.log(empieza);
+            
+            //let residuo: Number = empieza % 2;
+            let residuo = 0
             switch(residuo){
                 case 0:                    
                     jugadorX();
                     break;
-                default:                   
-                    jugadorO();
-                    break;    
+                   
             }
 
-        }while(empieza >9){
-            console.log('termino el juego');
+        }while(
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ){
+            //console.log('termino el juego');
+            return 0;
         };        
     }
     async function jugadorX(){
+        console.log('jugador X');
+        let archivoLeido = leer('./arreglo.txt');
+        let archivoParseado = JSON.parse(archivoLeido);
+        let formatoCargado: estructuraArreglo[] = archivoParseado;
+        //
+        const respuestaFilter = formatoCargado.filter(
+            function(valorActual){
+                const valor = valorActual.valor < 1;
+                return valor;
+            }
+        );
+        console.log('respuesta filter', respuestaFilter);
+        //let formatofilter: estructuraArreglo[] = respuestaFilter;
+    // const respuestaMap =  formatofilter.map(
+        const respuestaMap =  respuestaFilter.map(
+            function(valorACtual){
+                const nuevoObjeto = {
+                    posicion: valorACtual.posicion,
+                };
+                return nuevoObjeto;
+            }
+        );
+   
+        //const formatoMap: estructura2[] = respuestaMap;
+        console.log('respuesta map',respuestaMap);
+    
+        let posicionGato = await prompts(
+            {
+                type: 'number',
+                name: 'posicion',
+                message: 'ingresa la posicion que desea marcar'
+            }
+        );
+        console.log('posicionGato',posicionGato.posicion);
+
+        //const numero = Number (posicionGato.posicion);
+
+        let marca = respuestaMap.findIndex(
+            function (valorActual){
+                return valorActual.posicion == posicionGato.posicion; 
+            } 
+        );
+        console.log('valor de marca que da el finindex' ,marca);
+
+        if(marca >0){
+            console.log('no leee el numero');
+            juego();
+        }
+
+        const a = 1;
+        formatoCargado[posicionGato.posicion-1].valor = a;
+       
+        const arregloFinal = JSON.stringify(formatoCargado);
+        console.log('arreglo modificado' ,formatoCargado);
+
+    escribir(
+        './arreglo.txt',
+        arregloFinal
+    );
+    juego();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    async function jugadorO(){
+        console.log('jugador O');
         let archivoLeido = leer('./arreglo.txt');
         let archivoParseado = JSON.parse(archivoLeido);
         let formatoCargado: estructuraArreglo[] = archivoParseado;
@@ -90,7 +166,7 @@ async function gato(){
         );
    
         const formatoMap: estructura2[] = respuestaMap;
-    
+        console.log(respuestaMap);
         let posicionGato = await prompts(
             {
                 type: 'number',
@@ -100,36 +176,30 @@ async function gato(){
         );
 
         const numero = Number (posicionGato.posicion);
+        
 
-        const marca = formatoMap.findIndex(
+        let marca = formatoMap.findIndex(
             function (valorActual){
                 return valorActual.posicion == numero; 
             } 
         );
-//-----------------------------------------------------------
-        if(){
-
+        console.log('valor de marca que da el finindex' ,marca);
+        if(marca >0){
+            juego();
         }
 
-        const a = 1;
+        const a = 2;
         formatoCargado[marca].valor = a;
+        
         const arregloFinal = JSON.stringify(formatoCargado);
+        console.log(formatoCargado);
 
     escribir(
         './arreglo.txt',
         arregloFinal
     );
-    juego();
-    }
-
-    async function jugadorO(){
-
-    };
-
-    
-        
-    
-    
+    juego();};
+   
 }
 
 gato();

@@ -54,37 +54,21 @@ function gato() {
     return __awaiter(this, void 0, void 0, function () {
         function juego() {
             return __awaiter(this, void 0, void 0, function () {
-                var empieza, yaGano, residuo;
+                var residuo;
                 return __generator(this, function (_a) {
-                    empieza = 1;
-                    yaGano = false;
                     do {
-                        /*
-                         let empate =false;
-                         if (empieza =9){
-                             empate = true;
-                             return empate;
-                         }
-                         let gano = false;
-                         if(empate){
-                             gano = true;
-                             return gano;
-                         }
-                         let yaGano = gano || empate;
-             */
                         empieza = empieza + 1;
-                        residuo = empieza % 2;
+                        console.log(empieza);
+                        residuo = 0;
                         switch (residuo) {
                             case 0:
                                 jugadorX();
                                 break;
-                            default:
-                                jugadorO();
-                                break;
                         }
-                    } while (empieza > 9);
+                    } while (empieza != 10);
                     {
-                        console.log('termino el juego');
+                        //console.log('termino el juego');
+                        return [2 /*return*/, 0];
                     }
                     ;
                     return [2 /*return*/];
@@ -93,10 +77,11 @@ function gato() {
         }
         function jugadorX() {
             return __awaiter(this, void 0, void 0, function () {
-                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, formatofilter, respuestaMap, formatoMap, posicionGato, numero, marca, a, arregloFinal;
+                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, respuestaMap, posicionGato, marca, a, arregloFinal;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
+                            console.log('jugador X');
                             archivoLeido = leer_1.leer('./arreglo.txt');
                             archivoParseado = JSON.parse(archivoLeido);
                             formatoCargado = archivoParseado;
@@ -104,15 +89,15 @@ function gato() {
                                 var valor = valorActual.valor < 1;
                                 return valor;
                             });
-                            formatofilter = respuestaFilter;
-                            respuestaMap = formatofilter.map(function (valorACtual) {
+                            console.log('respuesta filter', respuestaFilter);
+                            respuestaMap = respuestaFilter.map(function (valorACtual) {
                                 var nuevoObjeto = {
                                     posicion: valorACtual.posicion,
                                 };
                                 return nuevoObjeto;
                             });
-                            console.log(respuestaMap);
-                            formatoMap = respuestaMap;
+                            //const formatoMap: estructura2[] = respuestaMap;
+                            console.log('respuesta map', respuestaMap);
                             return [4 /*yield*/, prompts({
                                     type: 'number',
                                     name: 'posicion',
@@ -120,19 +105,19 @@ function gato() {
                                 })];
                         case 1:
                             posicionGato = _a.sent();
-                            console.log(posicionGato);
-                            console.log(formatoCargado);
-                            console.log(formatoMap);
-                            numero = Number(posicionGato.posicion);
-                            console.log(numero);
-                            marca = formatoMap.findIndex(function (valorActual) {
-                                return valorActual.posicion == numero;
+                            console.log('posicionGato', posicionGato.posicion);
+                            marca = respuestaMap.findIndex(function (valorActual) {
+                                return valorActual.posicion == posicionGato.posicion;
                             });
-                            console.log(marca);
-                            console.log(formatoCargado);
+                            console.log('valor de marca que da el finindex', marca);
+                            if (marca > 0) {
+                                console.log('no leee el numero');
+                                juego();
+                            }
                             a = 1;
-                            formatoCargado[marca].valor = a;
+                            formatoCargado[posicionGato.posicion - 1].valor = a;
                             arregloFinal = JSON.stringify(formatoCargado);
+                            console.log('arreglo modificado', formatoCargado);
                             escribir_1.escribir('./arreglo.txt', arregloFinal);
                             juego();
                             return [2 /*return*/];
@@ -146,6 +131,7 @@ function gato() {
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
+                            console.log('jugador O');
                             archivoLeido = leer_1.leer('./arreglo.txt');
                             archivoParseado = JSON.parse(archivoLeido);
                             formatoCargado = archivoParseado;
@@ -160,8 +146,8 @@ function gato() {
                                 };
                                 return nuevoObjeto;
                             });
-                            console.log(respuestaMap);
                             formatoMap = respuestaMap;
+                            console.log(respuestaMap);
                             return [4 /*yield*/, prompts({
                                     type: 'number',
                                     name: 'posicion',
@@ -169,19 +155,18 @@ function gato() {
                                 })];
                         case 1:
                             posicionGato = _a.sent();
-                            console.log(posicionGato);
-                            console.log(formatoCargado);
-                            console.log(formatoMap);
                             numero = Number(posicionGato.posicion);
-                            console.log(numero);
                             marca = formatoMap.findIndex(function (valorActual) {
                                 return valorActual.posicion == numero;
                             });
-                            console.log(marca);
-                            console.log(formatoCargado);
-                            a = 1;
+                            console.log('valor de marca que da el finindex', marca);
+                            if (marca > 0) {
+                                juego();
+                            }
+                            a = 2;
                             formatoCargado[marca].valor = a;
                             arregloFinal = JSON.stringify(formatoCargado);
+                            console.log(formatoCargado);
                             escribir_1.escribir('./arreglo.txt', arregloFinal);
                             juego();
                             return [2 /*return*/];
@@ -189,7 +174,10 @@ function gato() {
                 });
             });
         }
+        var empieza, yaGano;
         return __generator(this, function (_a) {
+            empieza = 0;
+            yaGano = false;
             juego();
             ;
             return [2 /*return*/];
