@@ -11,7 +11,7 @@ import { estructura2 } from './estructura2';
 console.log();
 // bienvenida
 console.log();
-let archivoLeido = leer('./formato-base.txt');
+    let archivoLeido = leer('./formato-base.txt');
     let archivoParseado = JSON.parse(archivoLeido);
     let copia: estructuraArreglo[] = archivoParseado;
     const arregloFinal = JSON.stringify(copia);
@@ -21,39 +21,67 @@ let archivoLeido = leer('./formato-base.txt');
         arregloFinal
     );
 
-async function gato(){
-    
-    
-    
-
+function gato(){
     let empieza = 0;
-    let yaGano = false;
-
+    let yaGano = 0;
     juego();
-    async function juego(){
-        
-        
-        do{
+    
 
+    async function juego(){
+        const rfin = fin();
+        const rempate = empate();  
+        yaGano =  rfin + rempate;  
+        console.log('yaGano vale ahora', yaGano);  
+          //---------------------------------------------------------------  
+        if(yaGano = 0){
+            while(yaGano = 0 ){
             empieza = empieza + 1;
             console.log(empieza);
-            
             //let residuo: Number = empieza % 2;
-            let residuo = 0
+            let residuo = 0;
             switch(residuo){
                 case 0:                    
                     jugadorX();
-                    break;
-                   
-            }
-
-        }while(
-            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ){
-            //console.log('termino el juego');
-            return 0;
-        };        
+                    await jugadorX;
+                    break;                  
+            };
+        };
+        
+    }else{
+        console.log('finaaaal');
     }
+                
+                
+    };
+
+    function setermino(){
+        console.log('termino el juego');
+    }
+    function fin(){
+        return 0;
+    };
+
+    function empate(){
+        let archivoLeido = leer('./arreglo.txt');
+        let archivoParseado = JSON.parse(archivoLeido);
+        let formatoCargado: estructuraArreglo[] = archivoParseado;
+        const respuestaFilter = formatoCargado.filter(
+            function(valorActual){
+                const valor = valorActual.valor < 1;
+                return valor;
+            }
+        );
+        const jugadaDisponible = respuestaFilter.length;
+        console.log('jugadas disponibles',jugadaDisponible)
+        if(jugadaDisponible = 0){
+            console.log('vale ahora uno');
+            return 1;           
+        }else{
+            console.log('vale ahora cero');
+            return 0;           
+        };
+    }
+
     async function jugadorX(){
         console.log('jugador X');
         let archivoLeido = leer('./arreglo.txt');
@@ -66,9 +94,8 @@ async function gato(){
                 return valor;
             }
         );
-        console.log('respuesta filter', respuestaFilter);
         //let formatofilter: estructuraArreglo[] = respuestaFilter;
-    // const respuestaMap =  formatofilter.map(
+        // const respuestaMap =  formatofilter.map(
         const respuestaMap =  respuestaFilter.map(
             function(valorACtual){
                 const nuevoObjeto = {

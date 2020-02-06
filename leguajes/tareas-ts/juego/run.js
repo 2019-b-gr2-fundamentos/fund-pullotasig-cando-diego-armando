@@ -51,138 +51,179 @@ var copia = archivoParseado;
 var arregloFinal = JSON.stringify(copia);
 escribir_1.escribir('./arreglo.txt', arregloFinal);
 function gato() {
-    return __awaiter(this, void 0, void 0, function () {
-        function juego() {
-            return __awaiter(this, void 0, void 0, function () {
-                var residuo;
-                return __generator(this, function (_a) {
-                    do {
+    var empieza = 0;
+    var yaGano = 0;
+    juego();
+    yield juego;
+    function juego() {
+        return __awaiter(this, void 0, void 0, function () {
+            var rfin, rempate, residuo, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        rfin = fin();
+                        rempate = empate();
+                        yaGano = rfin + rempate;
+                        console.log('yaGano vale ahora', yaGano);
+                        if (!(yaGano = 0)) return [3 /*break*/, 6];
+                        _b.label = 1;
+                    case 1:
+                        if (!(yaGano = 0)) return [3 /*break*/, 5];
                         empieza = empieza + 1;
                         console.log(empieza);
                         residuo = 0;
-                        switch (residuo) {
-                            case 0:
-                                jugadorX();
-                                break;
+                        _a = residuo;
+                        switch (_a) {
+                            case 0: return [3 /*break*/, 2];
                         }
-                    } while (empieza != 10);
-                    {
-                        //console.log('termino el juego');
-                        return [2 /*return*/, 0];
-                    }
-                    ;
-                    return [2 /*return*/];
-                });
+                        return [3 /*break*/, 4];
+                    case 2:
+                        jugadorX();
+                        return [4 /*yield*/, jugadorX];
+                    case 3:
+                        _b.sent();
+                        return [3 /*break*/, 4];
+                    case 4:
+                        ;
+                        return [3 /*break*/, 1];
+                    case 5:
+                        ;
+                        return [3 /*break*/, 7];
+                    case 6:
+                        console.log('finaaaal');
+                        _b.label = 7;
+                    case 7: return [2 /*return*/];
+                }
             });
-        }
-        function jugadorX() {
-            return __awaiter(this, void 0, void 0, function () {
-                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, respuestaMap, posicionGato, marca, a, arregloFinal;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            console.log('jugador X');
-                            archivoLeido = leer_1.leer('./arreglo.txt');
-                            archivoParseado = JSON.parse(archivoLeido);
-                            formatoCargado = archivoParseado;
-                            respuestaFilter = formatoCargado.filter(function (valorActual) {
-                                var valor = valorActual.valor < 1;
-                                return valor;
-                            });
-                            console.log('respuesta filter', respuestaFilter);
-                            respuestaMap = respuestaFilter.map(function (valorACtual) {
-                                var nuevoObjeto = {
-                                    posicion: valorACtual.posicion,
-                                };
-                                return nuevoObjeto;
-                            });
-                            //const formatoMap: estructura2[] = respuestaMap;
-                            console.log('respuesta map', respuestaMap);
-                            return [4 /*yield*/, prompts({
-                                    type: 'number',
-                                    name: 'posicion',
-                                    message: 'ingresa la posicion que desea marcar'
-                                })];
-                        case 1:
-                            posicionGato = _a.sent();
-                            console.log('posicionGato', posicionGato.posicion);
-                            marca = respuestaMap.findIndex(function (valorActual) {
-                                return valorActual.posicion == posicionGato.posicion;
-                            });
-                            console.log('valor de marca que da el finindex', marca);
-                            if (marca > 0) {
-                                console.log('no leee el numero');
-                                juego();
-                            }
-                            a = 1;
-                            formatoCargado[posicionGato.posicion - 1].valor = a;
-                            arregloFinal = JSON.stringify(formatoCargado);
-                            console.log('arreglo modificado', formatoCargado);
-                            escribir_1.escribir('./arreglo.txt', arregloFinal);
-                            juego();
-                            return [2 /*return*/];
-                    }
-                });
-            });
-        }
-        function jugadorO() {
-            return __awaiter(this, void 0, void 0, function () {
-                var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, formatofilter, respuestaMap, formatoMap, posicionGato, numero, marca, a, arregloFinal;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            console.log('jugador O');
-                            archivoLeido = leer_1.leer('./arreglo.txt');
-                            archivoParseado = JSON.parse(archivoLeido);
-                            formatoCargado = archivoParseado;
-                            respuestaFilter = formatoCargado.filter(function (valorActual) {
-                                var valor = valorActual.valor < 1;
-                                return valor;
-                            });
-                            formatofilter = respuestaFilter;
-                            respuestaMap = formatofilter.map(function (valorACtual) {
-                                var nuevoObjeto = {
-                                    posicion: valorACtual.posicion,
-                                };
-                                return nuevoObjeto;
-                            });
-                            formatoMap = respuestaMap;
-                            console.log(respuestaMap);
-                            return [4 /*yield*/, prompts({
-                                    type: 'number',
-                                    name: 'posicion',
-                                    message: 'ingresa la posicion que desea marcar'
-                                })];
-                        case 1:
-                            posicionGato = _a.sent();
-                            numero = Number(posicionGato.posicion);
-                            marca = formatoMap.findIndex(function (valorActual) {
-                                return valorActual.posicion == numero;
-                            });
-                            console.log('valor de marca que da el finindex', marca);
-                            if (marca > 0) {
-                                juego();
-                            }
-                            a = 2;
-                            formatoCargado[marca].valor = a;
-                            arregloFinal = JSON.stringify(formatoCargado);
-                            console.log(formatoCargado);
-                            escribir_1.escribir('./arreglo.txt', arregloFinal);
-                            juego();
-                            return [2 /*return*/];
-                    }
-                });
-            });
-        }
-        var empieza, yaGano;
-        return __generator(this, function (_a) {
-            empieza = 0;
-            yaGano = false;
-            juego();
-            ;
-            return [2 /*return*/];
         });
-    });
+    }
+    ;
+    function setermino() {
+        console.log('termino el juego');
+    }
+    function fin() {
+        return 0;
+    }
+    ;
+    function empate() {
+        var archivoLeido = leer_1.leer('./arreglo.txt');
+        var archivoParseado = JSON.parse(archivoLeido);
+        var formatoCargado = archivoParseado;
+        var respuestaFilter = formatoCargado.filter(function (valorActual) {
+            var valor = valorActual.valor < 1;
+            return valor;
+        });
+        var jugadaDisponible = respuestaFilter.length;
+        console.log('jugadas disponibles', jugadaDisponible);
+        if (jugadaDisponible = 0) {
+            console.log('vale ahora uno');
+            return 1;
+        }
+        else {
+            console.log('vale ahora cero');
+            return 0;
+        }
+        ;
+    }
+    function jugadorX() {
+        return __awaiter(this, void 0, void 0, function () {
+            var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, respuestaMap, posicionGato, marca, a, arregloFinal;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        console.log('jugador X');
+                        archivoLeido = leer_1.leer('./arreglo.txt');
+                        archivoParseado = JSON.parse(archivoLeido);
+                        formatoCargado = archivoParseado;
+                        respuestaFilter = formatoCargado.filter(function (valorActual) {
+                            var valor = valorActual.valor < 1;
+                            return valor;
+                        });
+                        respuestaMap = respuestaFilter.map(function (valorACtual) {
+                            var nuevoObjeto = {
+                                posicion: valorACtual.posicion,
+                            };
+                            return nuevoObjeto;
+                        });
+                        //const formatoMap: estructura2[] = respuestaMap;
+                        console.log('respuesta map', respuestaMap);
+                        return [4 /*yield*/, prompts({
+                                type: 'number',
+                                name: 'posicion',
+                                message: 'ingresa la posicion que desea marcar'
+                            })];
+                    case 1:
+                        posicionGato = _a.sent();
+                        console.log('posicionGato', posicionGato.posicion);
+                        marca = respuestaMap.findIndex(function (valorActual) {
+                            return valorActual.posicion == posicionGato.posicion;
+                        });
+                        console.log('valor de marca que da el finindex', marca);
+                        if (marca > 0) {
+                            console.log('no leee el numero');
+                            juego();
+                        }
+                        a = 1;
+                        formatoCargado[posicionGato.posicion - 1].valor = a;
+                        arregloFinal = JSON.stringify(formatoCargado);
+                        console.log('arreglo modificado', formatoCargado);
+                        escribir_1.escribir('./arreglo.txt', arregloFinal);
+                        juego();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    }
+    function jugadorO() {
+        return __awaiter(this, void 0, void 0, function () {
+            var archivoLeido, archivoParseado, formatoCargado, respuestaFilter, formatofilter, respuestaMap, formatoMap, posicionGato, numero, marca, a, arregloFinal;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        console.log('jugador O');
+                        archivoLeido = leer_1.leer('./arreglo.txt');
+                        archivoParseado = JSON.parse(archivoLeido);
+                        formatoCargado = archivoParseado;
+                        respuestaFilter = formatoCargado.filter(function (valorActual) {
+                            var valor = valorActual.valor < 1;
+                            return valor;
+                        });
+                        formatofilter = respuestaFilter;
+                        respuestaMap = formatofilter.map(function (valorACtual) {
+                            var nuevoObjeto = {
+                                posicion: valorACtual.posicion,
+                            };
+                            return nuevoObjeto;
+                        });
+                        formatoMap = respuestaMap;
+                        console.log(respuestaMap);
+                        return [4 /*yield*/, prompts({
+                                type: 'number',
+                                name: 'posicion',
+                                message: 'ingresa la posicion que desea marcar'
+                            })];
+                    case 1:
+                        posicionGato = _a.sent();
+                        numero = Number(posicionGato.posicion);
+                        marca = formatoMap.findIndex(function (valorActual) {
+                            return valorActual.posicion == numero;
+                        });
+                        console.log('valor de marca que da el finindex', marca);
+                        if (marca > 0) {
+                            juego();
+                        }
+                        a = 2;
+                        formatoCargado[marca].valor = a;
+                        arregloFinal = JSON.stringify(formatoCargado);
+                        console.log(formatoCargado);
+                        escribir_1.escribir('./arreglo.txt', arregloFinal);
+                        juego();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    }
+    ;
 }
 gato();
 /*

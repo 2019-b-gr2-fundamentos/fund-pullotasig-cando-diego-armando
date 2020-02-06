@@ -68,9 +68,7 @@ function main(){
             const condicion5 = valorActual.nota < 5;
             // condicion es un truty o true
             return condicion7 || condicion5;
-
         }
-
     );
     
     console.log('respuestaFilter:', respuestaFilter);
