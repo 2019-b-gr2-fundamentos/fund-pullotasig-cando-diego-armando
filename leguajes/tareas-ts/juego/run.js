@@ -54,21 +54,17 @@ function gato() {
     var empieza = 0;
     var yaGano = 0;
     juego();
-    yield juego;
     function juego() {
         return __awaiter(this, void 0, void 0, function () {
-            var rfin, rempate, residuo, _a;
+            var rempate, yaGano, residuo, _a;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
-                        rfin = fin();
                         rempate = empate();
-                        yaGano = rfin + rempate;
+                        yaGano = rempate;
                         console.log('yaGano vale ahora', yaGano);
-                        if (!(yaGano = 0)) return [3 /*break*/, 6];
                         _b.label = 1;
                     case 1:
-                        if (!(yaGano = 0)) return [3 /*break*/, 5];
                         empieza = empieza + 1;
                         console.log(empieza);
                         residuo = 0;
@@ -85,12 +81,12 @@ function gato() {
                         return [3 /*break*/, 4];
                     case 4:
                         ;
-                        return [3 /*break*/, 1];
+                        return [4 /*yield*/, empate()];
                     case 5:
-                        ;
-                        return [3 /*break*/, 7];
+                        _b.sent();
+                        _b.label = 6;
                     case 6:
-                        console.log('finaaaal');
+                        if (yaGano = 1) return [3 /*break*/, 1];
                         _b.label = 7;
                     case 7: return [2 /*return*/];
                 }
@@ -98,13 +94,14 @@ function gato() {
         });
     }
     ;
-    function setermino() {
-        console.log('termino el juego');
-    }
-    function fin() {
-        return 0;
-    }
-    ;
+    /*
+        function setermino(){
+            console.log('termino el juego');
+        }
+        function fin(){
+            return 0;
+        };
+    */
     function empate() {
         var archivoLeido = leer_1.leer('./arreglo.txt');
         var archivoParseado = JSON.parse(archivoLeido);

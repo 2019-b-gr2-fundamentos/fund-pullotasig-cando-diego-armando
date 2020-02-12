@@ -28,16 +28,17 @@ function gato(){
     
 
     async function juego(){
-        const rfin = fin();
         const rempate = empate();  
-        yaGano =  rfin + rempate;  
-        console.log('yaGano vale ahora', yaGano);  
+ 
+        let yaGano =  rempate;  
+        console.log('yaGano vale ahora', yaGano); 
+        
           //---------------------------------------------------------------  
-        if(yaGano = 0){
-            while(yaGano = 0 ){
+        do{
+            
             empieza = empieza + 1;
             console.log(empieza);
-            //let residuo: Number = empieza % 2;
+
             let residuo = 0;
             switch(residuo){
                 case 0:                    
@@ -45,22 +46,19 @@ function gato(){
                     await jugadorX;
                     break;                  
             };
-        };
+        await empate();
         
-    }else{
-        console.log('finaaaal');
-    }
-                
-                
+    }while(yaGano = 1 );          
+        
     };
-
+/*
     function setermino(){
         console.log('termino el juego');
     }
     function fin(){
         return 0;
     };
-
+*/
     function empate(){
         let archivoLeido = leer('./arreglo.txt');
         let archivoParseado = JSON.parse(archivoLeido);
@@ -72,7 +70,7 @@ function gato(){
             }
         );
         const jugadaDisponible = respuestaFilter.length;
-        console.log('jugadas disponibles',jugadaDisponible)
+        console.log('jugadas disponibles',jugadaDisponible);
         if(jugadaDisponible = 0){
             console.log('vale ahora uno');
             return 1;           
@@ -80,6 +78,7 @@ function gato(){
             console.log('vale ahora cero');
             return 0;           
         };
+
     }
 
     async function jugadorX(){
