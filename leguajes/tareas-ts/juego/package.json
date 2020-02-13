@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "go": "( tsc run.ts --target ES5 || echo) && node run.js"
+    "go": "( tsc correcion.ts --target ES5 || echo) && node correcion.js"
   },
   "author": "",
   "license": "ISC",

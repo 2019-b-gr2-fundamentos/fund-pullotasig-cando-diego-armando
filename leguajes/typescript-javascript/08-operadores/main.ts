@@ -85,7 +85,7 @@ function main(){
             const condicion = valorACtual.nota < 1;
             // condicion es un truty o true
             return condicion;
-        }
+        }  
     );
 
     console.log('respuestaSome:', respuestaSome);

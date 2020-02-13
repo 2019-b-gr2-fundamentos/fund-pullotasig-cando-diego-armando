@@ -19,7 +19,7 @@ console.log(arregloNumeros);
 
 
 arregloNumeros.indexOf(5); // 5
-console.log(arregloNumeros);
+console.log(arregloNumeros);  
 arregloNumeros.indexOf(7); // 
 console.log(arregloNumeros);
 

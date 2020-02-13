@@ -71,7 +71,7 @@ function gato(){
         );
         const jugadaDisponible = respuestaFilter.length;
         console.log('jugadas disponibles',jugadaDisponible);
-        if(jugadaDisponible = 0){
+        if(jugadaDisponible > 0){
             console.log('vale ahora uno');
             return 1;           
         }else{
