@@ -49,16 +49,16 @@ function main(){
         function(valorACtual,i,arreglo){
             const nuevoObjeto = {
                 id: valorACtual.id,
-                nombre: valorACtual.nombre,
+/*                nombre: valorACtual.nombre,
     
-                nota20: valorACtual.nota*2
+                nota20: valorACtual.nota*2*/
 
             };
             return nuevoObjeto;
         }
     );
     console.log('respuestaMap:', respuestaMap);
-    console.log('arreglo:', arregloEstudiante);
+    console.log('arreglo:', arregloEstudiante); 
 
     // .filter ---> filtrar el arreglo (condicion ---> devuelve un arreglo con valores filtrados)
     const respuestaFilter = arregloEstudiante
@@ -68,10 +68,9 @@ function main(){
             const condicion5 = valorActual.nota < 5;
             // condicion es un truty o true
             return condicion7 || condicion5;
-
         }
-
     );
+    
     console.log('respuestaFilter:', respuestaFilter);
     console.log('arreglo:', arregloEstudiante);
 
@@ -86,7 +85,7 @@ function main(){
             const condicion = valorACtual.nota < 1;
             // condicion es un truty o true
             return condicion;
-        }
+        }  
     );
 
     console.log('respuestaSome:', respuestaSome);

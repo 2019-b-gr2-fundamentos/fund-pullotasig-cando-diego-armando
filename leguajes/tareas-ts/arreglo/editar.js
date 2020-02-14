@@ -42,10 +42,12 @@ var prompts = require("prompts");
 var escribir_1 = require("./escribir");
 function editar() {
     return __awaiter(this, void 0, void 0, function () {
-        var archivoleido, archivoCargado, archivoConEstructura, idBuscar, idModificar, newApodo, newNombre, newTipo, newNivel, newEdad, arregloFinal;
+        var archivole, archivoleido, archivoCargado, archivoConEstructura, idBuscar, idModificar, newApodo, newNombre, newTipo, newNivel, newEdad, arregloFinal;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    archivole = leer_1.leer('./logo.txt');
+                    console.log(archivole);
                     archivoleido = leer_1.leer('./arreglo.txt');
                     archivoCargado = JSON.parse(archivoleido);
                     archivoConEstructura = archivoCargado;
@@ -56,7 +58,7 @@ function editar() {
                         })];
                 case 1:
                     idBuscar = _a.sent();
-                    idModificar = archivoConEstructura.findIndex(function (valorActual) {
+                    idModificar = archivoConEstructura.findIndex(function (valorActual, indice, arreglo) {
                         return valorActual.id == idBuscar.id;
                     });
                     return [4 /*yield*/, prompts({
