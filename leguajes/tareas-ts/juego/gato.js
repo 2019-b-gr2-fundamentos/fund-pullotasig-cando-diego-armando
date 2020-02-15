@@ -44,6 +44,9 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompts = require("prompts");
+var leer_1 = require("../arreglo/leer");
+var archivoLeido = leer_1.leer('./logo-juego.txt');
+console.log(archivoLeido);
 var arregloNumeros = [
     { id: 1, valor: 0 },
     { id: 2, valor: 0 },
@@ -91,10 +94,6 @@ function main() {
                     case 7:
                         ;
                         cambio = cambio + 1;
-                        arregloDePosicionesdisponibles = arregloJuego.some(function (valorActual, i, arreglo) {
-                            var condicion = valorActual.valor == 0;
-                            return condicion;
-                        });
                         return [3 /*break*/, 0];
                     case 8: return [2 /*return*/];
                 }
@@ -103,7 +102,7 @@ function main() {
     }
     function jugadorXXX() {
         return __awaiter(this, void 0, void 0, function () {
-            var respuestaFilter, respuestaMap, posicionGatoAModificar, comprobarFilter, a, posicicion;
+            var respuestaFilter, respuestaMap, marca, posicionGatoAModificar, comprobarFilter, a, posicicion;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -117,16 +116,22 @@ function main() {
                             };
                             return nuevoObjeto;
                         });
-                        console.log('jugadas disponibles', respuestaMap);
+                        marca = leer_1.leer('./marcaX.txt');
+                        console.log(marca);
+                        console.log('                                                 ');
                         return [4 /*yield*/, prompts({
                                 type: 'number',
                                 name: 'id',
-                                message: 'ingresa la id que desee marcar'
+                                message: 'ESCRIBA EL NUMERO DE LA CASILLA QUE QUIERE MARCAR'
                             })];
                     case 1:
                         posicionGatoAModificar = _a.sent();
                         comprobarFilter = respuestaMap.some(function (valorActual, i, arreglo) {
                             var condicion = valorActual.posicicion == posicionGatoAModificar.id;
+                            return condicion;
+                        });
+                        arregloDePosicionesdisponibles = arregloJuego.some(function (valorActual, i, arreglo) {
+                            var condicion = valorActual.valor == 0;
                             return condicion;
                         });
                         if (!(comprobarFilter == false)) return [3 /*break*/, 3];
@@ -135,10 +140,10 @@ function main() {
                         _a.sent();
                         return [3 /*break*/, 4];
                     case 3:
-                        a = 1;
+                        a = 2;
                         posicicion = posicionGatoAModificar.id - 1;
                         arregloJuego[posicicion].valor = a;
-                        console.log(arregloJuego);
+                        gano();
                         _a.label = 4;
                     case 4: return [2 /*return*/];
                 }
@@ -147,7 +152,7 @@ function main() {
     }
     function jugadorOOO() {
         return __awaiter(this, void 0, void 0, function () {
-            var respuestaFilter, respuestaMap, posicionGatoAModificar, comprobarFilter, b, posicicion;
+            var respuestaFilter, respuestaMap, marca, posicionGatoAModificar, comprobarFilter, a, posicicion;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -161,16 +166,22 @@ function main() {
                             };
                             return nuevoObjeto;
                         });
-                        console.log('jugadas disponibles', respuestaMap);
+                        marca = leer_1.leer('./marcaO.txt');
+                        console.log(marca);
+                        console.log('                                                 ');
                         return [4 /*yield*/, prompts({
                                 type: 'number',
                                 name: 'id',
-                                message: 'ingresa la id que desee marcar'
+                                message: 'ESCRIBA EL NUMERO DE LA CASILLA QUE QUIERE MARCAR'
                             })];
                     case 1:
                         posicionGatoAModificar = _a.sent();
                         comprobarFilter = respuestaMap.some(function (valorActual, i, arreglo) {
                             var condicion = valorActual.posicicion == posicionGatoAModificar.id;
+                            return condicion;
+                        });
+                        arregloDePosicionesdisponibles = arregloJuego.some(function (valorActual, i, arreglo) {
+                            var condicion = valorActual.valor == 0;
                             return condicion;
                         });
                         if (!(comprobarFilter == false)) return [3 /*break*/, 3];
@@ -179,10 +190,10 @@ function main() {
                         _a.sent();
                         return [3 /*break*/, 4];
                     case 3:
-                        b = 2;
+                        a = 1;
                         posicicion = posicionGatoAModificar.id - 1;
-                        arregloJuego[posicicion].valor = b;
-                        console.log(arregloJuego);
+                        arregloJuego[posicicion].valor = a;
+                        gano();
                         _a.label = 4;
                     case 4: return [2 /*return*/];
                 }
@@ -204,108 +215,164 @@ function imprimir() {
             return valorActual.id == 3;
         });
         var valor3 = arregloJuego[idModificar3].valor;
+        var a;
+        var b;
+        var c;
         function fila1() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ╔════╗  ■';
+                a = '  ▒██     ██▒  ║';
             }
             if (valor1 == 1) {
-                a = '  ¤   ¤  ■';
+                a = '   ▒▄█████▄    ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ╔════╗  ■';
+                b = '  ▒██     ██▒  ║';
             }
             if (valor2 == 1) {
-                b = '  ¤   ¤  ■';
+                b = '   ▒▄█████▄    ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ╔════╗  ';
+                c = '  ▒██     ██▒  ';
             }
             if (valor3 == 1) {
-                c = '  ¤   ¤  ';
+                c = '   ▒▄█████▄    ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
             }
             console.log(a + b + c);
         }
         function fila2() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ║    ║  ■';
+                a = '  ▒▒ █▄ ▄█▒▒░  ║';
             }
             if (valor1 == 1) {
-                a = '    ¤    ■';
+                a = '  ▒██▒    ██▒  ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ║    ║  ■';
+                b = '  ▒▒ █▄ ▄█▒▒░  ║';
             }
             if (valor2 == 1) {
-                b = '    ¤    ■';
+                b = '  ▒██▒    ██▒  ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ║    ║  ';
+                c = '  ▒▒ █▄ ▄█▒▒░  ';
             }
             if (valor3 == 1) {
-                c = '    ¤    ';
+                c = '  ▒██▒    ██▒  ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
             }
             console.log(a + b + c);
         }
         function fila3() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ╚════╝  ■';
+                a = '  ░░  ▄█▄▒ ░   ║';
             }
             if (valor1 == 1) {
-                a = '  ¤   ¤  ■';
+                a = '  ▒██░    ██▒  ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ╚════╝  ■';
+                b = '  ░░  ▄█▄▒ ░   ║';
             }
             if (valor2 == 1) {
-                b = '  ¤   ¤  ■';
+                b = '  ▒██░    ██▒  ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ╚════╝  ';
+                c = '  ░░  ▄█▄▒ ░   ';
             }
             if (valor3 == 1) {
-                c = '  ¤   ¤  ';
+                c = '  ▒██░    ██▒  ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
+            }
+            console.log(a + b + c);
+        }
+        function fila4() {
+            if (valor1 == 2) {
+                a = '   ░▒█▀ ▀█░▒   ║';
+            }
+            if (valor1 == 1) {
+                a = '  ▒██     ██░  ║';
+            }
+            if (valor1 == 0) {
+                a = '               ║';
+            }
+            if (valor2 == 2) {
+                b = '   ░▒█▀ ▀█░▒   ║';
+            }
+            if (valor2 == 1) {
+                b = '  ▒██     ██░  ║';
+            }
+            if (valor2 == 0) {
+                b = '               ║';
+            }
+            if (valor3 == 2) {
+                c = '   ░▒█▀ ▀█░▒   ';
+            }
+            if (valor3 == 1) {
+                c = '  ▒██     ██░  ';
+            }
+            if (valor3 == 0) {
+                c = '               ';
+            }
+            console.log(a + b + c);
+        }
+        function fila5() {
+            if (valor1 == 2) {
+                a = '  ▒██▒   ▒██▒  ║';
+            }
+            if (valor1 == 1) {
+                a = '  ░ ▀█████▀▒   ║';
+            }
+            if (valor1 == 0) {
+                a = '             1 ║';
+            }
+            if (valor2 == 2) {
+                b = '  ▒██▒   ▒██▒  ║';
+            }
+            if (valor2 == 1) {
+                b = '  ░ ▀█████▀▒   ║';
+            }
+            if (valor2 == 0) {
+                b = '             2 ║';
+            }
+            if (valor3 == 2) {
+                c = '  ▒██▒   ▒██▒  ';
+            }
+            if (valor3 == 1) {
+                c = '  ░ ▀█████▀▒   ';
+            }
+            if (valor3 == 0) {
+                c = '             3 ';
             }
             console.log(a + b + c);
         }
         fila1();
         fila2();
         fila3();
+        fila4();
+        fila5();
     }
     function medio() {
         var idModificar1 = arregloJuego.findIndex(function (valorActual, indice, arreglo) {
@@ -320,108 +387,164 @@ function imprimir() {
             return valorActual.id == 6;
         });
         var valor3 = arregloJuego[idModificar3].valor;
+        var a;
+        var b;
+        var c;
         function fila1() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ╔════╗  ■';
+                a = '  ▒██     ██▒  ║';
             }
             if (valor1 == 1) {
-                a = '  ¤   ¤  ■';
+                a = '   ▒▄█████▄    ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ╔════╗  ■';
+                b = '  ▒██     ██▒  ║';
             }
             if (valor2 == 1) {
-                b = '  ¤   ¤  ■';
+                b = '   ▒▄█████▄    ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ╔════╗  ';
+                c = '  ▒██     ██▒  ';
             }
             if (valor3 == 1) {
-                c = '  ¤   ¤  ';
+                c = '   ▒▄█████▄    ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
             }
             console.log(a + b + c);
         }
         function fila2() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ║    ║  ■';
+                a = '  ▒▒ █▄ ▄█▒▒░  ║';
             }
             if (valor1 == 1) {
-                a = '    ¤    ■';
+                a = '  ▒██▒    ██▒  ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ║    ║  ■';
+                b = '  ▒▒ █▄ ▄█▒▒░  ║';
             }
             if (valor2 == 1) {
-                b = '    ¤    ■';
+                b = '  ▒██▒    ██▒  ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ║    ║  ';
+                c = '  ▒▒ █▄ ▄█▒▒░  ';
             }
             if (valor3 == 1) {
-                c = '    ¤    ';
+                c = '  ▒██▒    ██▒  ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
             }
             console.log(a + b + c);
         }
         function fila3() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ╚════╝  ■';
+                a = '  ░░  ▄█▄▒ ░   ║';
             }
             if (valor1 == 1) {
-                a = '  ¤   ¤  ■';
+                a = '  ▒██░    ██▒  ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ╚════╝  ■';
+                b = '  ░░  ▄█▄▒ ░   ║';
             }
             if (valor2 == 1) {
-                b = '  ¤   ¤  ■';
+                b = '  ▒██░    ██▒  ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ╚════╝  ';
+                c = '  ░░  ▄█▄▒ ░   ';
             }
             if (valor3 == 1) {
-                c = '  ¤   ¤  ';
+                c = '  ▒██░    ██▒  ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
+            }
+            console.log(a + b + c);
+        }
+        function fila4() {
+            if (valor1 == 2) {
+                a = '   ░▒█▀ ▀█░▒   ║';
+            }
+            if (valor1 == 1) {
+                a = '  ▒██     ██░  ║';
+            }
+            if (valor1 == 0) {
+                a = '               ║';
+            }
+            if (valor2 == 2) {
+                b = '   ░▒█▀ ▀█░▒   ║';
+            }
+            if (valor2 == 1) {
+                b = '  ▒██     ██░  ║';
+            }
+            if (valor2 == 0) {
+                b = '               ║';
+            }
+            if (valor3 == 2) {
+                c = '   ░▒█▀ ▀█░▒   ';
+            }
+            if (valor3 == 1) {
+                c = '  ▒██     ██░  ';
+            }
+            if (valor3 == 0) {
+                c = '               ';
+            }
+            console.log(a + b + c);
+        }
+        function fila5() {
+            if (valor1 == 2) {
+                a = '  ▒██▒   ▒██▒  ║';
+            }
+            if (valor1 == 1) {
+                a = '  ░ ▀█████▀▒   ║';
+            }
+            if (valor1 == 0) {
+                a = '             4 ║';
+            }
+            if (valor2 == 2) {
+                b = '  ▒██▒   ▒██▒  ║';
+            }
+            if (valor2 == 1) {
+                b = '  ░ ▀█████▀▒   ║';
+            }
+            if (valor2 == 0) {
+                b = '             5 ║';
+            }
+            if (valor3 == 2) {
+                c = '  ▒██▒   ▒██▒  ';
+            }
+            if (valor3 == 1) {
+                c = '  ░ ▀█████▀▒   ';
+            }
+            if (valor3 == 0) {
+                c = '             6 ';
             }
             console.log(a + b + c);
         }
         fila1();
         fila2();
         fila3();
+        fila4();
+        fila5();
     }
     function bajo() {
         var idModificar1 = arregloJuego.findIndex(function (valorActual, indice, arreglo) {
@@ -436,113 +559,205 @@ function imprimir() {
             return valorActual.id == 9;
         });
         var valor3 = arregloJuego[idModificar3].valor;
+        var a;
+        var b;
+        var c;
         function fila1() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ╔════╗  ■';
+                a = '  ▒██     ██▒  ║';
             }
             if (valor1 == 1) {
-                a = '  ¤   ¤  ■';
+                a = '   ▒▄█████▄    ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ╔════╗  ■';
+                b = '  ▒██     ██▒  ║';
             }
             if (valor2 == 1) {
-                b = '  ¤   ¤  ■';
+                b = '   ▒▄█████▄    ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ╔════╗  ';
+                c = '  ▒██     ██▒  ';
             }
             if (valor3 == 1) {
-                c = '  ¤   ¤  ';
+                c = '   ▒▄█████▄    ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
             }
             console.log(a + b + c);
         }
         function fila2() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ║    ║  ■';
+                a = '  ▒▒ █▄ ▄█▒▒░  ║';
             }
             if (valor1 == 1) {
-                a = '    ¤    ■';
+                a = '  ▒██▒    ██▒  ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ║    ║  ■';
+                b = '  ▒▒ █▄ ▄█▒▒░  ║';
             }
             if (valor2 == 1) {
-                b = '    ¤    ■';
+                b = '  ▒██▒    ██▒  ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ║    ║  ';
+                c = '  ▒▒ █▄ ▄█▒▒░  ';
             }
             if (valor3 == 1) {
-                c = '    ¤    ';
+                c = '  ▒██▒    ██▒  ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
             }
             console.log(a + b + c);
         }
         function fila3() {
-            var a;
-            var b;
-            var c;
             if (valor1 == 2) {
-                a = '  ╚════╝  ■';
+                a = '  ░░  ▄█▄▒ ░   ║';
             }
             if (valor1 == 1) {
-                a = '  ¤   ¤  ■';
+                a = '  ▒██░    ██▒  ║';
             }
             if (valor1 == 0) {
-                a = '          ■';
+                a = '               ║';
             }
             if (valor2 == 2) {
-                b = '  ╚════╝  ■';
+                b = '  ░░  ▄█▄▒ ░   ║';
             }
             if (valor2 == 1) {
-                b = '  ¤   ¤  ■';
+                b = '  ▒██░    ██▒  ║';
             }
             if (valor2 == 0) {
-                b = '          ■';
+                b = '               ║';
             }
             if (valor3 == 2) {
-                c = '  ╚════╝  ';
+                c = '  ░░  ▄█▄▒ ░   ';
             }
             if (valor3 == 1) {
-                c = '  ¤   ¤  ';
+                c = '  ▒██░    ██▒  ';
             }
             if (valor3 == 0) {
-                c = '          ';
+                c = '               ';
+            }
+            console.log(a + b + c);
+        }
+        function fila4() {
+            if (valor1 == 2) {
+                a = '   ░▒█▀ ▀█░▒   ║';
+            }
+            if (valor1 == 1) {
+                a = '  ▒██     ██░  ║';
+            }
+            if (valor1 == 0) {
+                a = '               ║';
+            }
+            if (valor2 == 2) {
+                b = '   ░▒█▀ ▀█░▒   ║';
+            }
+            if (valor2 == 1) {
+                b = '  ▒██     ██░  ║';
+            }
+            if (valor2 == 0) {
+                b = '               ║';
+            }
+            if (valor3 == 2) {
+                c = '   ░▒█▀ ▀█░▒   ';
+            }
+            if (valor3 == 1) {
+                c = '  ▒██     ██░  ';
+            }
+            if (valor3 == 0) {
+                c = '               ';
+            }
+            console.log(a + b + c);
+        }
+        function fila5() {
+            if (valor1 == 2) {
+                a = '  ▒██▒   ▒██▒  ║';
+            }
+            if (valor1 == 1) {
+                a = '  ░ ▀█████▀▒   ║';
+            }
+            if (valor1 == 0) {
+                a = '             7 ║';
+            }
+            if (valor2 == 2) {
+                b = '  ▒██▒   ▒██▒  ║';
+            }
+            if (valor2 == 1) {
+                b = '  ░ ▀█████▀▒   ║';
+            }
+            if (valor2 == 0) {
+                b = '             8 ║';
+            }
+            if (valor3 == 2) {
+                c = '  ▒██▒   ▒██▒  ';
+            }
+            if (valor3 == 1) {
+                c = '  ░ ▀█████▀▒   ';
+            }
+            if (valor3 == 0) {
+                c = '             9 ';
             }
             console.log(a + b + c);
         }
         fila1();
         fila2();
         fila3();
+        fila4();
+        fila5();
     }
+    console.log('                                                 ');
     sobre();
-    console.log('■ ■ ■ ■ ■  ', '■ ■ ■ ■ ■  ', '■ ■ ■ ■ ■');
+    console.log('═══════════════╬═══════════════╬════════════════');
     medio();
-    console.log('■ ■ ■ ■ ■  ', '■ ■ ■ ■ ■  ', '■ ■ ■ ■ ■');
+    console.log('═══════════════╬═══════════════╬════════════════');
     bajo();
+    console.log('                                                 ');
 }
+function gano() {
+    var a = arregloJuego[0].valor;
+    var b = arregloJuego[1].valor;
+    var c = arregloJuego[2].valor;
+    var d = arregloJuego[3].valor;
+    var e = arregloJuego[4].valor;
+    var f = arregloJuego[5].valor;
+    var g = arregloJuego[6].valor;
+    var h = arregloJuego[7].valor;
+    var i = arregloJuego[8].valor;
+    var ganoO = (a == b && a == c && a == 1) || (d == e && d == f && f == 1) || (g == h && h == i && i == 1) ||
+        (a == d && a == g && a == 1) || (b == e && b == h && h == 1) || (c == f && f == i && i == 1) ||
+        (a == e && a == i && e == 1) || (c == e && g == e && e == 1);
+    var ganoX = (a == b && a == c && a == 2) || (d == e && d == f && f == 2) || (g == h && h == i && i == 2) ||
+        (a == d && a == g && a == 2) || (b == e && b == h && h == 2) || (c == f && f == i && i == 2) ||
+        (a == e && a == i && e == 2) || (c == e && g == e && e == 2);
+    if (ganoO) {
+        var gano_1 = leer_1.leer('./ganoO.txt');
+        console.log('                                                 ');
+        console.log(gano_1);
+        console.log('                                                 ');
+        console.log('                                                 ');
+        arregloDePosicionesdisponibles = false;
+    }
+    if (ganoX) {
+        var gano_2 = leer_1.leer('./ganoX.txt');
+        console.log('                                                 ');
+        console.log(gano_2);
+        console.log('                                                 ');
+        console.log('                                                 ');
+        arregloDePosicionesdisponibles = false;
+    }
+}
+imprimir();
 main();

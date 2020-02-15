@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "go": "( tsc prototipo.ts --target ES5 || echo) && node prototipo.js"
+    "go": "( tsc gato.ts --target ES5 || echo) && node gato.js"
   },
   "author": "",
   "license": "ISC",
