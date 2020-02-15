@@ -44,81 +44,141 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompts = require("prompts");
+var arregloNumeros = [
+    { id: 1, valor: 0 },
+    { id: 2, valor: 0 },
+    { id: 3, valor: 0 },
+    { id: 4, valor: 0 },
+    { id: 5, valor: 0 },
+    { id: 6, valor: 0 },
+    { id: 7, valor: 0 },
+    { id: 8, valor: 0 },
+    { id: 9, valor: 0 }
+];
+var arregloJuego = __spreadArrays(arregloNumeros);
+var arregloDePosicionesdisponibles = true;
+var empieza = 2;
+var cambio = empieza;
 function main() {
-    // const arregloNumeros = [ 0,0,0,0,0,0,0,0,0,];
-    var arregloNumeros = [
-        { id: 1, valor: 1 },
-        { id: 2, valor: 0 },
-        { id: 3, valor: 0 },
-        { id: 4, valor: 0 },
-        { id: 5, valor: 1 },
-        { id: 6, valor: 0 },
-        { id: 7, valor: 0 },
-        { id: 8, valor: 0 },
-        { id: 9, valor: 0 }
-    ];
-    var arregloDePosicionesdisponibles = true;
-    var arregloJuego = __spreadArrays(arregloNumeros);
     juego();
     function juego() {
         return __awaiter(this, void 0, void 0, function () {
-            var _loop_1;
+            var residuo, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (!arregloDePosicionesdisponibles) return [3 /*break*/, 6];
+                        residuo = cambio % 2;
+                        _a = residuo;
+                        switch (_a) {
+                            case 0: return [3 /*break*/, 1];
+                        }
+                        return [3 /*break*/, 3];
+                    case 1: return [4 /*yield*/, jugadorXXX()];
+                    case 2:
+                        _b.sent();
+                        return [3 /*break*/, 5];
+                    case 3: return [4 /*yield*/, jugadorOOO()];
+                    case 4:
+                        _b.sent();
+                        return [3 /*break*/, 5];
+                    case 5:
+                        ;
+                        cambio = cambio + 1;
+                        arregloDePosicionesdisponibles = arregloJuego.some(function (valorActual, i, arreglo) {
+                            var condicion = valorActual.valor == 0;
+                            return condicion;
+                        });
+                        return [3 /*break*/, 0];
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    }
+    function jugadorXXX() {
+        return __awaiter(this, void 0, void 0, function () {
+            var respuestaFilter, respuestaMap, posicionGatoAModificar, comprobarFilter, a, posicicion;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _loop_1 = function () {
-                            var respuestaFilter, respuestaMap, jugadaDisponible, posicionGatoAModificar, comprobarFilter;
-                            return __generator(this, function (_a) {
-                                switch (_a.label) {
-                                    case 0:
-                                        respuestaFilter = arregloJuego.filter(function (valorActual) {
-                                            var valor = valorActual.valor < 1;
-                                            return valor;
-                                        });
-                                        console.log('respuesta filtradas disponibles', respuestaFilter);
-                                        respuestaMap = respuestaFilter.map(function (valorACtual) {
-                                            var nuevoObjeto = {
-                                                id: valorACtual.id,
-                                            };
-                                            return nuevoObjeto;
-                                        });
-                                        console.log('jugadas disponibles', respuestaMap);
-                                        jugadaDisponible = respuestaFilter.length;
-                                        console.log('jugadas disponibles', jugadaDisponible);
-                                        return [4 /*yield*/, prompts({
-                                                type: 'number',
-                                                name: 'id',
-                                                message: 'ingresa la id que desee marcar'
-                                            })];
-                                    case 1:
-                                        posicionGatoAModificar = _a.sent();
-                                        console.log('posicion que modificara el gato Gato', posicionGatoAModificar.id);
-                                        comprobarFilter = respuestaMap.some(function (valorActual, i, arreglo) {
-                                            var condicion = valorActual.id == posicionGatoAModificar.id;
-                                            return condicion;
-                                        });
-                                        console.log('posicion comprobacion', comprobarFilter);
-                                        if (comprobarFilter == false) {
-                                            console.log('no esta disponible ese valor en el juego');
-                                            juego();
-                                        }
-                                        console.log('bien');
-                                        arregloDePosicionesdisponibles = arregloJuego.some(function (valorActual, i, arreglo) {
-                                            var condicion = valorActual.valor == 0;
-                                            return condicion;
-                                        });
-                                        return [2 /*return*/];
-                                }
-                            });
-                        };
-                        _a.label = 1;
+                        respuestaFilter = arregloJuego.filter(function (valorActual) {
+                            var valor = valorActual.valor < 1;
+                            return valor;
+                        });
+                        respuestaMap = respuestaFilter.map(function (valorACtual) {
+                            var nuevoObjeto = {
+                                posicicion: valorACtual.id,
+                            };
+                            return nuevoObjeto;
+                        });
+                        console.log('jugadas disponibles', respuestaMap);
+                        return [4 /*yield*/, prompts({
+                                type: 'number',
+                                name: 'id',
+                                message: 'ingresa la id que desee marcar'
+                            })];
                     case 1:
-                        if (!arregloDePosicionesdisponibles) return [3 /*break*/, 3];
-                        return [5 /*yield**/, _loop_1()];
+                        posicionGatoAModificar = _a.sent();
+                        comprobarFilter = respuestaMap.some(function (valorActual, i, arreglo) {
+                            var condicion = valorActual.posicicion == posicionGatoAModificar.id;
+                            return condicion;
+                        });
+                        if (!(comprobarFilter == false)) return [3 /*break*/, 3];
+                        return [4 /*yield*/, jugadorXXX()];
                     case 2:
                         _a.sent();
-                        return [3 /*break*/, 1];
-                    case 3: return [2 /*return*/];
+                        return [3 /*break*/, 4];
+                    case 3:
+                        a = 1;
+                        posicicion = posicionGatoAModificar.id - 1;
+                        arregloJuego[posicicion].valor = a;
+                        console.log(arregloJuego);
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    }
+    function jugadorOOO() {
+        return __awaiter(this, void 0, void 0, function () {
+            var respuestaFilter, respuestaMap, posicionGatoAModificar, comprobarFilter, b, posicicion;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        respuestaFilter = arregloJuego.filter(function (valorActual) {
+                            var valor = valorActual.valor < 1;
+                            return valor;
+                        });
+                        respuestaMap = respuestaFilter.map(function (valorACtual) {
+                            var nuevoObjeto = {
+                                posicicion: valorACtual.id,
+                            };
+                            return nuevoObjeto;
+                        });
+                        console.log('jugadas disponibles', respuestaMap);
+                        return [4 /*yield*/, prompts({
+                                type: 'number',
+                                name: 'id',
+                                message: 'ingresa la id que desee marcar'
+                            })];
+                    case 1:
+                        posicionGatoAModificar = _a.sent();
+                        comprobarFilter = respuestaMap.some(function (valorActual, i, arreglo) {
+                            var condicion = valorActual.posicicion == posicionGatoAModificar.id;
+                            return condicion;
+                        });
+                        if (!(comprobarFilter == false)) return [3 /*break*/, 3];
+                        return [4 /*yield*/, jugadorOOO()];
+                    case 2:
+                        _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        b = 2;
+                        posicicion = posicionGatoAModificar.id - 1;
+                        arregloJuego[posicicion].valor = b;
+                        console.log(arregloJuego);
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
                 }
             });
         });

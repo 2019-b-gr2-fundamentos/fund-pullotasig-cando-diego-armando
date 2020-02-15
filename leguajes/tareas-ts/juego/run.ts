@@ -36,16 +36,7 @@ function gato(){
           //---------------------------------------------------------------  
         do{
             
-            empieza = empieza + 1;
-            console.log(empieza);
-
-            let residuo = 0;
-            switch(residuo){
-                case 0:                    
-                    jugadorX();
-                    await jugadorX;
-                    break;                  
-            };
+           
         await empate();
         
     }while(yaGano = 1 );          
