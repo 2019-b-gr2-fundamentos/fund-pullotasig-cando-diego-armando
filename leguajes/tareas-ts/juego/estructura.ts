@@ -1,3 +1,3 @@
 export interface estructuraArreglo{
-    posicion:  number; valor:   number;
+    id:  number; valor:   number;
 }

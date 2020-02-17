@@ -1,8 +1,9 @@
 import * as prompts from 'prompts';
 import {leer} from '../arreglo/leer';
+import {some} from './operadores';
+import {filter} from './operadores';
+import {map} from './operadores';
 import { estructuraArreglo } from './estructura';
-import { escribir } from '../arreglo/escribir';
-import { estructura2 } from './estructura2';
 let archivoLeido = leer('./logo-juego.txt');
 console.log(archivoLeido);
 const arregloNumeros = [
@@ -56,8 +57,10 @@ function main(){
             const valor = valorActual.valor < 1;
             return valor;
         }
-    );
-    //console.log('respuesta filtradas disponibles',respuestaFilter);
+    )
+
+
+
 
     let respuestaMap =  respuestaFilter.map(
         function(valorACtual){
@@ -67,10 +70,7 @@ function main(){
             return nuevoObjeto;
         }
     );
-    //console.log('jugadas disponibles',respuestaMap);
 
-    //let jugadaDisponible = respuestaFilter.length;
-    //console.log('jugadas disponibles',jugadaDisponible);
     let marca = leer('./marcaX.txt');
     console.log(marca);
     console.log('                                                 ');
@@ -81,7 +81,6 @@ function main(){
             message: 'ESCRIBA EL NUMERO DE LA CASILLA QUE QUIERE MARCAR'
         }
     );
-    //console.log('posicion que modificara el gato Gato',posicionGatoAModificar.id);
 
     let comprobarFilter = respuestaMap.some(
         function(valorActual,i,arreglo){
@@ -96,11 +95,11 @@ function main(){
         }
     ) 
 
-    //console.log('posicion comprobacion',comprobarFilter);
     if(comprobarFilter == false){
+        imprimir();
+        console.log('no se puede marcar esa casilla');
         await jugadorXXX();  
     }else{
-        //colocar valor
 
         const a = 2;
         const posicicion = posicionGatoAModificar.id -1;
@@ -120,7 +119,7 @@ function main(){
                 return valor;
             }
         );
-        //console.log('respuesta filtradas disponibles',respuestaFilter);
+
     
         let respuestaMap =  respuestaFilter.map(
             function(valorACtual){
@@ -130,10 +129,7 @@ function main(){
                 return nuevoObjeto;
             }
         );
-        //console.log('jugadas disponibles',respuestaMap);
-    
-        //let jugadaDisponible = respuestaFilter.length;
-        //console.log('jugadas disponibles',jugadaDisponible);
+
         let marca = leer('./marcaO.txt');
         console.log(marca);
         console.log('                                                 ');
@@ -161,6 +157,8 @@ function main(){
     
         //console.log('posicion comprobacion',comprobarFilter);
         if(comprobarFilter == false){
+            imprimir();
+            console.log('no se puede marcar esa casilla');
             await jugadorOOO();  
         }else{
             //colocar valor

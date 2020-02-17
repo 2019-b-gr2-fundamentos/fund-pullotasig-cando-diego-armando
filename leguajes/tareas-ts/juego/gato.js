@@ -45,6 +45,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompts = require("prompts");
 var leer_1 = require("../arreglo/leer");
+var operadores_1 = require("./operadores");
 var archivoLeido = leer_1.leer('./logo-juego.txt');
 console.log(archivoLeido);
 var arregloNumeros = [
@@ -102,11 +103,15 @@ function main() {
     }
     function jugadorXXX() {
         return __awaiter(this, void 0, void 0, function () {
-            var respuestaFilter, respuestaMap, marca, posicionGatoAModificar, comprobarFilter, a, posicicion;
+            var espuestaFilter, respuestaFilter, respuestaMap, marca, posicionGatoAModificar, comprobarFilter, a, posicicion;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        respuestaFilter = arregloJuego.filter(function (valorActual) {
+                        espuestaFilter = arregloJuego.filter(function (valorActual) {
+                            var valor = valorActual.valor < 1;
+                            return valor;
+                        });
+                        respuestaFilter = operadores_1.filter(arregloJuego, function (valorActual) {
                             var valor = valorActual.valor < 1;
                             return valor;
                         });
@@ -135,6 +140,8 @@ function main() {
                             return condicion;
                         });
                         if (!(comprobarFilter == false)) return [3 /*break*/, 3];
+                        imprimir();
+                        console.log('no se puede marcar esa casilla');
                         return [4 /*yield*/, jugadorXXX()];
                     case 2:
                         _a.sent();
@@ -185,6 +192,8 @@ function main() {
                             return condicion;
                         });
                         if (!(comprobarFilter == false)) return [3 /*break*/, 3];
+                        imprimir();
+                        console.log('no se puede marcar esa casilla');
                         return [4 /*yield*/, jugadorOOO()];
                     case 2:
                         _a.sent();
